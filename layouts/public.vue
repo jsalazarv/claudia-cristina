@@ -4,6 +4,7 @@
     <main>
       <NuxtPage />
     </main>
+    <!-- TODO: place the footer component -->
   </div>
 </template>
 
