@@ -10,7 +10,7 @@
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <a href="">Home</a>
+                  <NuxtLink to="/">Home</NuxtLink>
                   <ul class="sub-menu">
                     <li><a href="index.html">Home One</a></li>
                     <li><a href="index-2.html">Home Two</a></li>
@@ -87,7 +87,7 @@
                 </li>
                 <!-- Blog -->
                 <li class="menu-item has-children mega-menu">
-                  <a href="">Blog</a>
+                  <NuxtLink to="/blog">Blog</NuxtLink>
                   <ul class="sub-menu three-column">
                     <li class="cus-col-33">
                       <h3 class="menu-title"><a href="#">Blog Grid</a></h3>
@@ -172,7 +172,11 @@
                       </ul>
                     </div>
                     <div class="inner-single-block">
-                      <a href="checkout.html" class="btn w-100">Checkout</a>
+                      <NuxtLink
+                          class="btn w-100"
+                          to="/checkout">
+                        Checkout
+                      </NuxtLink>
                     </div>
                   </div>
                 </li>
