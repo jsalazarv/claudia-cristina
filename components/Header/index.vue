@@ -1,6 +1,9 @@
 <template>
   <div>
-    <header class="site-header ha-header-1 absolute-header sticky-init fixed-header d-lg-block d-none">
+    <header
+        class="site-header ha-header-1 absolute-header sticky-init fixed-header d-lg-block d-none"
+        :class="{'sticky-header': isFixed}"
+    >
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-5">
@@ -421,7 +424,21 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 
+const isFixed = ref(false);
+
+const handleScroll = () => {
+  isFixed.value = window.scrollY > 0;
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+})
 </script>
 
 <style scoped>
