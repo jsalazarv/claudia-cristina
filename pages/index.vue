@@ -2,9 +2,13 @@
   <div>
     <!-- TODO: Delete this section and replace it with the carousel -->
     <section class="hero-area section-margin" style="height: 100vh; background-color: #BCBCBC;">
-     <div class="d-flex justify-content-center align-items-center h-100">
-       <h1>CAROUSEL</h1>
-     </div>
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <swiper id="swiper-replace" :breakpoints="galleryBreakpoints" :navigation="galleryNavigation" :modules="modules">
+          <swiper-slide v-for="(image, i) in images" :key="i">
+            <img :src="image.image_url">
+          </swiper-slide>
+        </swiper>
+      </div>
     </section>
     <!-- ---------------------------------------------------------- -->
 
@@ -49,29 +53,29 @@
         <div class="ha-custom-tab">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="shop-tab" data-toggle="tab" href="#shop" role="tab"
-                 aria-controls="shop" aria-selected="true">
+              <a class="nav-link active" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop"
+                aria-selected="true">
                 <span class="icon"><img src="image/icon/tab-nav-icon-1.png" alt=""></span>
                 Shop
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab"
-                 aria-controls="men" aria-selected="true">
+              <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab" aria-controls="men"
+                aria-selected="true">
                 <span class="icon"><img src="image/icon/tab-nav-icon-2.png" alt=""></span>
                 Men
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="woman-tab" data-toggle="tab" href="#woman" role="tab"
-                 aria-controls="woman" aria-selected="false">
+              <a class="nav-link" id="woman-tab" data-toggle="tab" href="#woman" role="tab" aria-controls="woman"
+                aria-selected="false">
                 <span class="icon"><img src="image/icon/tab-nav-icon-3.png" alt=""></span>
                 Women
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="elements-tab" data-toggle="tab" href="#elements" role="tab"
-                 aria-controls="elements" aria-selected="false">
+              <a class="nav-link" id="elements-tab" data-toggle="tab" href="#elements" role="tab" aria-controls="elements"
+                aria-selected="false">
                 <span class="icon"><img src="image/icon/tab-nav-icon-4.png" alt=""></span>
                 Elements
               </a>
@@ -91,10 +95,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -113,11 +116,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts
-                        casual ethnic
-                        style pattern</a></h3>
+                          casual ethnic
+                          style pattern</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -132,10 +135,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -153,11 +155,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">yuqidong sudaderas
-                        hombre hip hop
-                        zipper</a></h3>
+                          hombre hip hop
+                          zipper</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -172,10 +174,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -193,11 +194,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">SexeMara Sweatshirts
-                        Hoodies Male
-                        Tracksuit</a></h3>
+                          Hoodies Male
+                          Tracksuit</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -212,10 +213,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -233,11 +233,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zengker winter
-                        hooded with fat
-                        thickening </a></h3>
+                          hooded with fat
+                          thickening </a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -252,10 +252,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -273,11 +272,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -292,10 +291,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -313,11 +311,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -332,10 +330,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -353,11 +350,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -372,10 +369,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -393,11 +389,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -416,10 +412,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -437,11 +432,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">yuqidong sudaderas
-                        hombre hip hop
-                        zipper</a></h3>
+                          hombre hip hop
+                          zipper</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -456,10 +451,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -477,11 +471,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts
-                        casual ethnic
-                        style pattern</a></h3>
+                          casual ethnic
+                          style pattern</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -496,10 +490,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -517,11 +510,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zengker winter
-                        hooded with fat
-                        thickening </a></h3>
+                          hooded with fat
+                          thickening </a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -536,10 +529,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -557,11 +549,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">SexeMara Sweatshirts
-                        Hoodies Male
-                        Tracksuit</a></h3>
+                          Hoodies Male
+                          Tracksuit</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -576,10 +568,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -597,11 +588,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -616,10 +607,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -637,11 +627,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -656,10 +646,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -677,11 +666,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -696,10 +685,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -717,11 +705,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -741,10 +729,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -762,11 +749,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts
-                        casual ethnic
-                        style pattern</a></h3>
+                          casual ethnic
+                          style pattern</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -781,10 +768,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -802,11 +788,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">yuqidong sudaderas
-                        hombre hip hop
-                        zipper</a></h3>
+                          hombre hip hop
+                          zipper</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -821,10 +807,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -841,11 +826,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -860,10 +845,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -880,11 +864,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">SexeMara Sweatshirts
-                        Hoodies Male
-                        Tracksuit</a></h3>
+                          Hoodies Male
+                          Tracksuit</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -899,10 +883,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -919,11 +902,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zengker winter
-                        hooded with fat
-                        thickening </a></h3>
+                          hooded with fat
+                          thickening </a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -938,10 +921,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -958,11 +940,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -977,10 +959,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -997,11 +978,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1016,10 +997,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1036,11 +1016,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1059,10 +1039,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1079,11 +1058,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts
-                        casual ethnic
-                        style pattern</a></h3>
+                          casual ethnic
+                          style pattern</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1099,10 +1078,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1119,11 +1097,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">SexeMara Sweatshirts
-                        Hoodies Male
-                        Tracksuit</a></h3>
+                          Hoodies Male
+                          Tracksuit</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1138,10 +1116,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1158,11 +1135,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1177,10 +1154,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1197,11 +1173,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> zengker winter
-                        hooded with fat
-                        thickening </a></h3>
+                          hooded with fat
+                          thickening </a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1216,10 +1192,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1236,11 +1211,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1255,10 +1230,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1275,11 +1249,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1294,10 +1268,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1314,11 +1287,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html"> Vantiorango PU
-                        Patchwork Knitted
-                        Plus</a></h3>
+                          Patchwork Knitted
+                          Plus</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1333,10 +1306,9 @@
 
                         <div class="hover-btns">
                           <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                          <a href="compare.html" class="sin-btn"><i
-                              class="ion-android-options"></i></a>
-                          <a href="javascript:" class="sin-btn" data-toggle="modal"
-                             data-target="#quickModal"><i class="ion-android-open"></i></a>
+                          <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                              class="ion-android-open"></i></a>
                         </div>
 
                       </div>
@@ -1353,11 +1325,11 @@
                         </div>
                       </div>
                       <h3 class="post-title"> <a href="product-details.html">yuqidong sudaderas
-                        hombre hip hop
-                        zipper</a></h3>
+                          hombre hip hop
+                          zipper</a></h3>
 
-                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span
-                          class="price-new">€500.00</span></p>
+                      <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1372,10 +1344,33 @@
 </template>
 
 <script setup lang="ts">
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation } from "swiper";
+import 'swiper/css';
+import "swiper/css/navigation";
+
 definePageMeta({
   layout: 'public'
 });
+const images = [
+  { image_url: 'image/others/blog-details-slider-3.jpg' },
+  { image_url: 'image/others/blog-details-slider-3.jpg' },
+  { image_url: 'image/others/blog-details-slider-3.jpg' },
+  { image_url: 'image/others/blog-details-slider-3.jpg' }
+]
+const galleryBreakpoints = {
+  10: {
+    slidesPerView: 1,
+    spaceBetween:10,
+  }
+}
+const galleryNavigation = {
+  enabled: true,
+  nextEl: '.arrow-right',
+  prevEl: '.arrow-left',
+}
+const modules = [Navigation]
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
