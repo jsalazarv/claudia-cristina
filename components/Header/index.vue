@@ -10,14 +10,7 @@
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <a href="">Home</a>
-                  <ul class="sub-menu">
-                    <li><a href="index.html">Home One</a></li>
-                    <li><a href="index-2.html">Home Two</a></li>
-                    <li><a href="index-3.html">Home Three</a></li>
-                    <li><a href="index-4.html">Home Four</a></li>
-                    <li><a href="index-5.html">Home Five</a></li>
-                  </ul>
+                  <a href="#">{{ $t('header.home') }}</a>
                 </li>
                 <!-- Shop -->
                 <li class="menu-item has-children mega-menu">
@@ -183,8 +176,16 @@
                     <div class="inner-single-block">
                       <h4 class="option-title">English <i class="fas fa-angle-down"></i></h4>
                       <ul class="option-list">
-                        <li><a href="">English</a></li>
-                        <li><a href="">اللغة العربية</a></li>
+                        <li>
+                          <a href="#" @click="$i18n.locale = 'en'">
+                            English
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" @click="$i18n.locale = 'es'">
+                            Spanish
+                          </a>
+                        </li>
                       </ul>
                     </div>
                     <div class="inner-single-block">
@@ -285,14 +286,7 @@
           <nav class="off-canvas-nav">
             <ul class="mobile-menu">
               <li class="menu-item-has-children">
-                <a href="#">Home</a>
-                <ul class="sub-menu">
-                  <li><a href="index.html">Home One</a></li>
-                  <li><a href="index-2.html">Home Two</a></li>
-                  <li><a href="index-3.html">Home Three</a></li>
-                  <li><a href="index-4.html">Home Four</a></li>
-                  <li><a href="index-5.html">Home Five</a></li>
-                </ul>
+                <a href="#">{{ $t('header.home') }}</a>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Blog</a>
@@ -433,8 +427,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const isFixed = ref(false);
 const isOpenAside = ref(false);
