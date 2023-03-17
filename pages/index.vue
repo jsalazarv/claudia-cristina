@@ -3,7 +3,7 @@
     <!-- TODO: Delete this section and replace it with the carousel -->
     <section class="hero-area section-margin" style="height: 100vh; background-color: #BCBCBC;">
      <div class="d-flex justify-content-center align-items-center h-100">
-       <h1>CAROUSEL</h1>
+       <h1>{{ $t('home.carousel') }}</h1>
      </div>
     </section>
     <!-- ---------------------------------------------------------- -->
