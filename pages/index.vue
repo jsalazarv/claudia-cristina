@@ -1368,6 +1368,160 @@
         </div>
       </div>
     </section>
+
+    <!-- TODO: Delete this section and replace it with the carousel -->
+    <section class="bg-image section-margin section-padding section-padding-top"
+             data-bg="image/bg-images/home-1/bg-testimonial.jpg" style="height: 50vh; background-color: #BCBCBC;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <h1>CAROUSEL</h1>
+      </div>
+    </section>
+    <!-- ---------------------------------------------------------- -->
+
+
+
+    <section class="section-padding">
+      <h2 class="sr-only">Promotion Imgaes</h2>
+      <div class="container">
+        <div class="row space-db--30">
+          <div class="col-lg-6 mb--30">
+            <a href="#" class="overflow-image">
+              <img src="image/others/promo-images.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6 mb--30">
+            <a href="#" class="overflow-image">
+              <img src="image/others/promo-images-2.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-margin">
+      <h2 class="sr-only">Method section</h2>
+      <div class="container">
+        <div class="row  border-bottom section-padding space-dt--30">
+          <div class="col-md-4 col-sm-6 mt--30">
+            <div class="method-card">
+              <div class="icon">
+                <img src="image/icon/method-icon-1.png" alt="">
+              </div>
+              <article class="text">
+                <h3 class="method-title"><a href="#">FREE SHIPPING WORLDWIDE</a></h3>
+                <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram</p>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt--30">
+            <div class="method-card">
+              <div class="icon">
+                <img src="image/icon/method-icon-2.png" alt="">
+              </div>
+              <article class="text">
+                <h3 class="method-title"><a href="#">MONEY BACK GUARANTEE</a></h3>
+                <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram</p>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt--30">
+            <div class="method-card">
+              <div class="icon">
+                <img src="image/icon/method-icon-3.png" alt="">
+              </div>
+              <article class="text">
+                <h3 class="method-title"><a href="#">ONLINE SUPPORT 24/7</a></h3>
+                <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container">
+        <div class="section-title mb--25">
+          <h2>Latest Blog</h2>
+          <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
+            formas.</p>
+        </div>
+        <div class="row ">
+          <div class="col-lg-4 col-md-6 mt--30">
+            <div class="blog-card">
+              <a href="image/others/blog-card-1.jpg" data-fancybox class="blog-image">
+                <img src="image/others/blog-card-1.jpg" alt="">
+                <div class="date-badge">
+									<span class="month">
+										august
+									</span>
+                  <h5>16</h5>
+                </div>
+                <div class="plus-icon">
+                  <i class="fas fa-plus-circle"></i>
+                </div>
+              </a>
+              <div class="text">
+                <h3 class="blog-title"><a href="blog-details.html">5 Disadvantages Of Handcraft</a></h3>
+                <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industrys standard
+                  dummy text ever since the ...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt--30">
+            <div class="blog-card">
+              <a href="image/others/blog-card-1.jpg" data-fancybox class="blog-image">
+                <img src="image/others/blog-card-1.jpg" alt="">
+                <div class="date-badge">
+									<span class="month">
+										august
+									</span>
+                  <h5>16</h5>
+                </div>
+                <div class="plus-icon">
+                  <i class="fas fa-plus-circle"></i>
+                </div>
+              </a>
+              <div class="text">
+                <h3 class="blog-title"><a href="blog-details--gallery-format.html">How You Can
+                  Workaround Handcraft</a></h3>
+                <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industrys standard
+                  dummy text ever since the ...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt--30">
+            <div class="blog-card">
+              <a href="image/others/blog-card-slider-3.jpg" data-fancybox class="blog-image">
+                <img src="image/others/blog-card-slider-3.jpg" alt="">
+                <div class="date-badge">
+									<span class="month">
+										august
+									</span>
+                  <h5>16</h5>
+                </div>
+                <div class="plus-icon">
+                  <i class="fas fa-plus-circle"></i>
+                </div>
+              </a>
+              <div class="text">
+                <h3 class="blog-title"><a href="blog-details.html">7 Awesome Things You Can Learn</a>
+                </h3>
+                <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industrys
+                  standard
+                  dummy text ever since the ...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
