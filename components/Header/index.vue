@@ -10,7 +10,7 @@
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <a href="#">{{ $t('header.home') }}</a>
+                  <NuxtLink to="/">{{ $t('header.home') }}</NuxtLink>
                 </li>
                 <!-- Shop -->
                 <li class="menu-item has-children mega-menu">
@@ -80,7 +80,7 @@
                 </li>
                 <!-- Blog -->
                 <li class="menu-item has-children mega-menu">
-                  <a href="">Blog</a>
+                  <NuxtLink to="/blog">Blog</NuxtLink>
                   <ul class="sub-menu three-column">
                     <li class="cus-col-33">
                       <h3 class="menu-title"><a href="#">Blog Grid</a></h3>
@@ -165,7 +165,11 @@
                       </ul>
                     </div>
                     <div class="inner-single-block">
-                      <a href="checkout.html" class="btn w-100">Checkout</a>
+                      <NuxtLink
+                          class="btn w-100"
+                          to="/checkout">
+                        Checkout
+                      </NuxtLink>
                     </div>
                   </div>
                 </li>
@@ -286,7 +290,7 @@
           <nav class="off-canvas-nav">
             <ul class="mobile-menu">
               <li class="menu-item-has-children">
-                <a href="#">{{ $t('header.home') }}</a>
+                <NuxtLink to="/">{{ $t('header.home') }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Blog</a>
