@@ -244,8 +244,12 @@
                   <a href="cart.html" class="cart-link link-icon"><i class="ion-bag"></i></a>
                 </li>
                 <li class="sin-link">
-                  <a href="#" class="link-icon hamburgur-icon off-canvas-btn"><i
-                      class="ion-navicon"></i></a>
+                  <a
+                      href="#"
+                      class="link-icon hamburgur-icon off-canvas-btn"
+                      @click="handleAside">
+                    <i class="ion-navicon"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -256,8 +260,14 @@
 
 
     <!--Off Canvas Navigation Start-->
-    <aside class="off-canvas-wrapper">
-      <div class="btn-close-off-canvas">
+    <aside
+        class="off-canvas-wrapper"
+        :class="{'open': isOpenAside}"
+    >
+      <div
+          class="btn-close-off-canvas"
+          @click="handleAside"
+      >
         <i class="ion-android-close"></i>
       </div>
       <div class="off-canvas-inner">
@@ -427,9 +437,14 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isFixed = ref(false);
+const isOpenAside = ref(false);
 
 const handleScroll = () => {
   isFixed.value = window.scrollY > 0;
+}
+
+const handleAside = () => {
+  isOpenAside.value = !isOpenAside.value
 }
 
 onMounted(() => {
