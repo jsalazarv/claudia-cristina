@@ -1345,7 +1345,11 @@
     <section class="bg-image section-margin section-padding section-padding-top"
              data-bg="/image/bg-images/home-1/bg-testimonial.jpg" style="height: 50vh; background-color: #BCBCBC;">
       <div class="d-flex justify-content-center align-items-center h-100">
-        <h1>CAROUSEL</h1>
+        <swiper id="swiper-replace" :breakpoints="galleryBreakpoints" :navigation="galleryNavigation" :modules="modules">
+          <swiper-slide v-for="(image, i) in images" :key="i">
+            <img :src="image.image_url">
+          </swiper-slide>
+        </swiper>
       </div>
     </section>
     <!-- ---------------------------------------------------------- -->
