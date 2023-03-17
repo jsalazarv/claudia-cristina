@@ -1,20 +1,16 @@
 <template>
   <div>
-    <header class="site-header ha-header-1 absolute-header sticky-init fixed-header d-lg-block d-none">
+    <header
+        class="site-header ha-header-1 absolute-header sticky-init fixed-header d-lg-block d-none"
+        :class="{'sticky-header': isFixed}"
+    >
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-5">
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <a href="">Home</a>
-                  <ul class="sub-menu">
-                    <li><a href="index.html">Home One</a></li>
-                    <li><a href="index-2.html">Home Two</a></li>
-                    <li><a href="index-3.html">Home Three</a></li>
-                    <li><a href="index-4.html">Home Four</a></li>
-                    <li><a href="index-5.html">Home Five</a></li>
-                  </ul>
+                  <NuxtLink to="/">{{ $t('header.home') }}</NuxtLink>
                 </li>
                 <!-- Shop -->
                 <li class="menu-item has-children mega-menu">
@@ -84,7 +80,7 @@
                 </li>
                 <!-- Blog -->
                 <li class="menu-item has-children mega-menu">
-                  <a href="">Blog</a>
+                  <NuxtLink to="/blog">Blog</NuxtLink>
                   <ul class="sub-menu three-column">
                     <li class="cus-col-33">
                       <h3 class="menu-title"><a href="#">Blog Grid</a></h3>
@@ -169,7 +165,11 @@
                       </ul>
                     </div>
                     <div class="inner-single-block">
-                      <a href="checkout.html" class="btn w-100">Checkout</a>
+                      <NuxtLink
+                          class="btn w-100"
+                          to="/checkout">
+                        Checkout
+                      </NuxtLink>
                     </div>
                   </div>
                 </li>
@@ -180,8 +180,16 @@
                     <div class="inner-single-block">
                       <h4 class="option-title">English <i class="fas fa-angle-down"></i></h4>
                       <ul class="option-list">
-                        <li><a href="">English</a></li>
-                        <li><a href="">اللغة العربية</a></li>
+                        <li>
+                          <a href="#" @click="$i18n.locale = 'en'">
+                            English
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" @click="$i18n.locale = 'es'">
+                            Spanish
+                          </a>
+                        </li>
                       </ul>
                     </div>
                     <div class="inner-single-block">
@@ -241,8 +249,12 @@
                   <a href="cart.html" class="cart-link link-icon"><i class="ion-bag"></i></a>
                 </li>
                 <li class="sin-link">
-                  <a href="#" class="link-icon hamburgur-icon off-canvas-btn"><i
-                      class="ion-navicon"></i></a>
+                  <a
+                      href="#"
+                      class="link-icon hamburgur-icon off-canvas-btn"
+                      @click="handleAside">
+                    <i class="ion-navicon"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -253,8 +265,14 @@
 
 
     <!--Off Canvas Navigation Start-->
-    <aside class="off-canvas-wrapper">
-      <div class="btn-close-off-canvas">
+    <aside
+        class="off-canvas-wrapper"
+        :class="{'open': isOpenAside}"
+    >
+      <div
+          class="btn-close-off-canvas"
+          @click="handleAside"
+      >
         <i class="ion-android-close"></i>
       </div>
       <div class="off-canvas-inner">
@@ -272,14 +290,7 @@
           <nav class="off-canvas-nav">
             <ul class="mobile-menu">
               <li class="menu-item-has-children">
-                <a href="#">Home</a>
-                <ul class="sub-menu">
-                  <li><a href="index.html">Home One</a></li>
-                  <li><a href="index-2.html">Home Two</a></li>
-                  <li><a href="index-3.html">Home Three</a></li>
-                  <li><a href="index-4.html">Home Four</a></li>
-                  <li><a href="index-5.html">Home Five</a></li>
-                </ul>
+                <NuxtLink to="/">{{ $t('header.home') }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Blog</a>
@@ -420,8 +431,27 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 
+const isFixed = ref(false);
+const isOpenAside = ref(false);
+
+const handleScroll = () => {
+  isFixed.value = window.scrollY > 0;
+}
+
+const handleAside = () => {
+  isOpenAside.value = !isOpenAside.value
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+})
 </script>
 
 <style scoped>
