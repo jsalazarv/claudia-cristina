@@ -3,8 +3,16 @@
     <!-- TODO: Delete this section and replace it with the carousel -->
     <section class="hero-area section-margin" style="height: 100vh; background-color: #BCBCBC;">
       <div class="d-flex justify-content-center align-items-center h-100">
-        <swiper id="swiper-replace" :breakpoints="galleryBreakpoints" :navigation="galleryNavigation" :modules="modules">
-          <swiper-slide v-for="(image, i) in images" :key="i">
+        <swiper id="swiper-replace" :breakpoints="galleryBreakpoints" :style="{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }" :navigation="true" :autoplay='{
+  "delay": 2500,
+  "disableOnInteraction": false
+}' :pagination='{
+  "clickable": true
+}' :modules="modules">
+          <swiper-slide v-for="(image, i) in main_images" :key="i">
             <img :src="image.image_url">
           </swiper-slide>
         </swiper>
@@ -53,29 +61,29 @@
         <div class="ha-custom-tab">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="shop-tab" data-toggle="tab" href="#shop" role="tab"
-                 aria-controls="shop" aria-selected="true">
+              <a class="nav-link active" id="shop-tab" data-toggle="tab" href="#shop" role="tab" aria-controls="shop"
+                aria-selected="true">
                 <span class="icon"><img src="/image/icon/tab-nav-icon-1.png" alt=""></span>
                 Shop
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab"
-                 aria-controls="men" aria-selected="true">
+              <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab" aria-controls="men"
+                aria-selected="true">
                 <span class="icon"><img src="/image/icon/tab-nav-icon-2.png" alt=""></span>
                 Men
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="woman-tab" data-toggle="tab" href="#woman" role="tab"
-                 aria-controls="woman" aria-selected="false">
+              <a class="nav-link" id="woman-tab" data-toggle="tab" href="#woman" role="tab" aria-controls="woman"
+                aria-selected="false">
                 <span class="icon"><img src="/image/icon/tab-nav-icon-3.png" alt=""></span>
                 Women
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="elements-tab" data-toggle="tab" href="#elements" role="tab"
-                 aria-controls="elements" aria-selected="false">
+              <a class="nav-link" id="elements-tab" data-toggle="tab" href="#elements" role="tab" aria-controls="elements"
+                aria-selected="false">
                 <span class="icon"><img src="/image/icon/tab-nav-icon-4.png" alt=""></span>
                 Elements
               </a>
@@ -1343,7 +1351,7 @@
 
     <!-- TODO: Delete this section and replace it with the carousel -->
     <section class="bg-image section-margin section-padding section-padding-top"
-             data-bg="/image/bg-images/home-1/bg-testimonial.jpg" style="height: 50vh; background-color: #BCBCBC;">
+      data-bg="/image/bg-images/home-1/bg-testimonial.jpg" style="height: 50vh; background-color: #BCBCBC;">
       <div class="d-flex justify-content-center align-items-center h-100">
         <swiper id="swiper-replace" :breakpoints="galleryBreakpoints" :navigation="galleryNavigation" :modules="modules">
           <swiper-slide v-for="(image, i) in images" :key="i">
@@ -1354,6 +1362,249 @@
     </section>
     <!-- ---------------------------------------------------------- -->
 
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title mb--55">
+          <h2>Latest Products</h2>
+          <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
+            formas.</p>
+        </div>
+        <swiper id="swiper-replace" :breakpoints="cardBreakpoints" :style="{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        }" :navigation="true" 
+         :modules="modules">
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image">
+                <img src="image/products/home-1/product-1.jpg" alt="">
+                <div class="hover-content">
+                  <a href="product-details.html" class="hover-image">
+                    <img src="image/products/home-1/product-2.jpg" alt="">
+                  </a>
+
+                  <div class="hover-btns">
+                    <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
+                    <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                    <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                        class="ion-android-open"></i></a>
+                  </div>
+
+                </div>
+                <span class="product-badge">new</span>
+                <span class="product-badge-2">-5%</span>
+              </div>
+              <div class="description-block">
+                <div class="description-header">
+                  <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                  <div class="rating-block">
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline"></span>
+                    <span class="ion-android-star-outline"></span>
+                  </div>
+                </div>
+                <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts casual
+                    ethnic style pattern</a></h3>
+
+                <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span></p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image">
+                <img src="image/products/home-1/product-3.jpg" alt="">
+                <div class="hover-content">
+                  <a href="product-details.html" class="hover-image">
+                    <img src="image/products/home-1/product-4.jpg" alt="">
+                  </a>
+
+                  <div class="hover-btns">
+                    <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
+                    <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                    <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                        class="ion-android-open"></i></a>
+                  </div>
+
+                </div>
+                <span class="product-badge">new</span>
+                <span class="product-badge-2">-5%</span>
+              </div>
+              <div class="description-block">
+                <div class="description-header">
+                  <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                  <div class="rating-block">
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline"></span>
+                    <span class="ion-android-star-outline"></span>
+                  </div>
+                </div>
+                <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts casual
+                    ethnic style pattern</a></h3>
+
+                <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span></p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image">
+                <img src="image/products/home-1/product-5.jpg" alt="">
+                <div class="hover-content">
+                  <a href="product-details.html" class="hover-image">
+                    <img src="image/products/home-1/product-6.jpg" alt="">
+                  </a>
+
+                  <div class="hover-btns">
+                    <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
+                    <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                    <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                        class="ion-android-open"></i></a>
+                  </div>
+
+                </div>
+                <span class="product-badge">new</span>
+                <span class="product-badge-2">-5%</span>
+              </div>
+              <div class="description-block">
+                <div class="description-header">
+                  <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                  <div class="rating-block">
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline"></span>
+                    <span class="ion-android-star-outline"></span>
+                  </div>
+                </div>
+                <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts casual
+                    ethnic style pattern</a></h3>
+
+                <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span></p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image">
+                <img src="image/products/home-1/product-7.jpg" alt="">
+                <div class="hover-content">
+                  <a href="product-details.html" class="hover-image">
+                    <img src="image/products/home-1/product-8.jpg" alt="">
+                  </a>
+
+                  <div class="hover-btns">
+                    <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
+                    <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                    <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                        class="ion-android-open"></i></a>
+                  </div>
+
+                </div>
+                <span class="product-badge">new</span>
+                <span class="product-badge-2">-5%</span>
+              </div>
+              <div class="description-block">
+                <div class="description-header">
+                  <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                  <div class="rating-block">
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline"></span>
+                    <span class="ion-android-star-outline"></span>
+                  </div>
+                </div>
+                <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts casual
+                    ethnic style pattern</a></h3>
+
+                <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span></p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image">
+                <img src="image/products/home-1/product-9.jpg" alt="">
+                <div class="hover-content">
+                  <a href="product-details.html" class="hover-image">
+                    <img src="image/products/home-1/product-10.jpg" alt="">
+                  </a>
+
+                  <div class="hover-btns">
+                    <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
+                    <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                    <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                        class="ion-android-open"></i></a>
+                  </div>
+
+                </div>
+                <span class="product-badge">new</span>
+                <span class="product-badge-2">-5%</span>
+              </div>
+              <div class="description-block">
+                <div class="description-header">
+                  <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                  <div class="rating-block">
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline"></span>
+                    <span class="ion-android-star-outline"></span>
+                  </div>
+                </div>
+                <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts casual
+                    ethnic style pattern</a></h3>
+
+                <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span></p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="product-card">
+              <div class="image">
+                <img src="image/products/home-1/product-11.jpg" alt="">
+                <div class="hover-content">
+                  <a href="product-details.html" class="hover-image">
+                    <img src="image/products/home-1/product-12.jpg" alt="">
+                  </a>
+
+                  <div class="hover-btns">
+                    <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
+                    <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
+                    <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
+                        class="ion-android-open"></i></a>
+                  </div>
+
+                </div>
+                <span class="product-badge">new</span>
+                <span class="product-badge-2">-5%</span>
+              </div>
+              <div class="description-block">
+                <div class="description-header">
+                  <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                  <div class="rating-block">
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline star_on"></span>
+                    <span class="ion-android-star-outline"></span>
+                    <span class="ion-android-star-outline"></span>
+                  </div>
+                </div>
+                <h3 class="post-title"> <a href="product-details.html"> zyfg men sweatshirts casual
+                    ethnic style pattern</a></h3>
+
+                <p class="mb-0 price"><del class="price-old">€500.00</del> <span class="price-new">€500.00</span></p>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+    </section>
 
 
     <section class="section-padding">
@@ -1428,9 +1679,9 @@
               <a href="/image/others/blog-card-1.jpg" data-fancybox class="blog-image">
                 <img src="/image/others/blog-card-1.jpg" alt="">
                 <div class="date-badge">
-									<span class="month">
-										august
-									</span>
+                  <span class="month">
+                    august
+                  </span>
                   <h5>16</h5>
                 </div>
                 <div class="plus-icon">
@@ -1451,9 +1702,9 @@
               <a href="/image/others/blog-card-1.jpg" data-fancybox class="blog-image">
                 <img src="/image/others/blog-card-1.jpg" alt="">
                 <div class="date-badge">
-									<span class="month">
-										august
-									</span>
+                  <span class="month">
+                    august
+                  </span>
                   <h5>16</h5>
                 </div>
                 <div class="plus-icon">
@@ -1462,7 +1713,7 @@
               </a>
               <div class="text">
                 <h3 class="blog-title"><a href="blog-details--gallery-format.html">How You Can
-                  Workaround Handcraft</a></h3>
+                    Workaround Handcraft</a></h3>
                 <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                   Ipsum has been the industrys standard
@@ -1475,9 +1726,9 @@
               <a href="/image/others/blog-card-slider-3.jpg" data-fancybox class="blog-image">
                 <img src="/image/others/blog-card-slider-3.jpg" alt="">
                 <div class="date-badge">
-									<span class="month">
-										august
-									</span>
+                  <span class="month">
+                    august
+                  </span>
                   <h5>16</h5>
                 </div>
                 <div class="plus-icon">
@@ -1504,30 +1755,48 @@
 <script setup lang="ts">
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
+import 'swiper/css/pagination';
 
 definePageMeta({
   layout: 'public'
 });
+const main_images = [
+  { image_url: 'image/bg-images/home-1/home-slider-image-2.jpg' },
+  { image_url: 'image/bg-images/home-1/home-slider-image-2.jpg' },
+  { image_url: 'image/bg-images/home-1/home-slider-image-2.jpg' },
+  { image_url: 'image/bg-images/home-1/home-slider-image-2.jpg' }
+]
 const images = [
-  { image_url: 'image/others/blog-details-slider-3.jpg' },
-  { image_url: 'image/others/blog-details-slider-3.jpg' },
-  { image_url: 'image/others/blog-details-slider-3.jpg' },
-  { image_url: 'image/others/blog-details-slider-3.jpg' }
+  { image_url: 'image/bg-images/home-1/bg-testimonial.jpg' },
+  { image_url: 'image/bg-images/home-1/bg-testimonial.jpg' },
+  { image_url: 'image/bg-images/home-1/bg-testimonial.jpg' },
+  { image_url: 'image/bg-images/home-1/bg-testimonial.jpg' }
 ]
 const galleryBreakpoints = {
   10: {
     slidesPerView: 1,
-    spaceBetween:10,
+    spaceBetween: 10,
   }
+}
+const cardBreakpoints = {
+  320: {
+      slidesPerView: 2.5,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 4.5,
+      spaceBetween: 10,
+    }
 }
 const galleryNavigation = {
   enabled: true,
   nextEl: '.arrow-right',
   prevEl: '.arrow-left',
 }
+
 const modules = [Navigation]
 </script>
 
