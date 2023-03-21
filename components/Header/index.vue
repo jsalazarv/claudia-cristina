@@ -181,12 +181,12 @@
                       <h4 class="option-title">English <i class="fas fa-angle-down"></i></h4>
                       <ul class="option-list">
                         <li>
-                          <a href="#" @click="$i18n.locale = 'en'">
+                          <a href="#" @click="changeLanguage('en')">
                             English
                           </a>
                         </li>
                         <li>
-                          <a href="#" @click="$i18n.locale = 'es'">
+                          <a href="#" @click="changeLanguage('es')">
                             Spanish
                           </a>
                         </li>
@@ -433,9 +433,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useLanguagesStore } from '@/store/languages';
+import { createI18n } from 'vue-i18n'
 
 const isFixed = ref(false);
 const isOpenAside = ref(false);
+const languageStore = useLanguagesStore();
 
 const handleScroll = () => {
   isFixed.value = window.scrollY > 0;
@@ -445,8 +448,14 @@ const handleAside = () => {
   isOpenAside.value = !isOpenAside.value
 }
 
+const changeLanguage = (newLang) => {
+  languageStore.setLang(newLang)
+  createI18n.locale = newLang
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  createI18n.locale = languageStore.lang
 })
 
 onUnmounted(() => {

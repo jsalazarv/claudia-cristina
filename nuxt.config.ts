@@ -1,4 +1,8 @@
 export default {
+    plugins: [
+        '/plugins/pinia.js',
+        '/plugins/i18n.js'
+      ],
     buildModules: [
         '@nuxt/typescript-build',
         '@nuxtjs/axios',
