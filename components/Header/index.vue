@@ -176,7 +176,11 @@
             <div class="mobile-header-btns header-top-widget ">
               <ul class="header-links">
                 <li class="sin-link">
-                  <a href="cart.html" class="cart-link link-icon"><i class="ion-bag"></i></a>
+                  <NuxtLink
+                      class="art-link link-icon"
+                      to="/cart">
+                    <i class="ion-bag"></i>
+                  </NuxtLink>
                 </li>
                 <li class="sin-link">
                   <a
