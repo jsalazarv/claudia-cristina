@@ -111,7 +111,7 @@
                   </ul>
                 </li>
                 <li class="menu-item">
-                  <a href="contact.html">Contact</a>
+                  <NuxtLink :to="localePath('/contact')">{{ $t('header.contact') }}</NuxtLink>
                 </li>
               </ul>
             </div>
