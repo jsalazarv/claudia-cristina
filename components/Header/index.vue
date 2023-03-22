@@ -12,8 +12,11 @@
                 <li class="menu-item has-children">
                   <NuxtLink :to="localePath('/')">{{ $t('header.home') }}</NuxtLink>
                 </li>
+                <li class="menu-item has-children">
+                  <NuxtLink :to="localePath('/shop')">{{ $t('header.shop') }}</NuxtLink>
+                </li>
                 <!-- Shop -->
-                <li class="menu-item has-children mega-menu">
+                <!--<li class="menu-item has-children mega-menu">
                   <a href="">shop</a>
                   <ul class="sub-menu four-column">
                     <li class="cus-col-25">
@@ -65,7 +68,7 @@
                       </ul>
                     </li>
                   </ul>
-                </li>
+                </li>-->
                 <!-- Pages -->
                 <li class="menu-item has-children">
                   <a href="">Pages</a>
@@ -118,9 +121,9 @@
           </div>
           <div class="col-lg-3 col-xl-3 offset-lg-1 offset-xl-0">
             <div class="site-brand">
-              <a href="index.html">
-                <img src="image/main-logo-white.png" alt="">
-              </a>
+              <NuxtLink :to="localePath('/')">
+                <img width="300" src="/images/logo-white.png" alt="">
+              </NuxtLink>
             </div>
           </div>
           <div class="col-lg-3 col-xl-4">
