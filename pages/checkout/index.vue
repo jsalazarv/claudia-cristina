@@ -1,21 +1,10 @@
 <template>
   <div>
-    <section class="bg-image" style="background-image: url('/image/others/bredcrumb-bg.jpg')" data-bg="/image/others/bredcrumb-bg.jpg">
-      <h2 class="sr-only">Site Breadcrumb</h2>
-      <div class="container">
-        <div class="breadcrumb-contents">
-          <nav aria-label="breadcrumb">
-            <h2 class="page-name">Checkout</h2>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <NuxtLink to="/">Home</NuxtLink>
-              </li>
-              <li class="breadcrumb-item">Checkout</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </section>
+    <Banner
+        bg-image="http://localhost:3001/image/others/bredcrumb-bg.jpg"
+        title="Site Breadcrumb"
+        page-name="Checkout"
+        :links="breadcrumbLinks"/>
     <main id="content" class="page-section inner-page-sec-padding-top space-db--20">
       <div class="container">
         <div class="row">
@@ -278,11 +267,20 @@
 </template>
 
 <script setup lang="ts">
-
 definePageMeta({
   layout: 'public'
 });
 
+const breadcrumbLinks = [
+  {
+    title: 'Home',
+    url: '/'
+  },
+  {
+    title: 'Checkout',
+    url: '/checkout'
+  }
+];
 </script>
 
 <style scoped>
