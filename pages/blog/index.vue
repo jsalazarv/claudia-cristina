@@ -3,7 +3,7 @@
     <Banner
         bg-image="http://localhost:3001/image/others/bredcrumb-bg.jpg"
         title="Site Breadcrumb"
-        page-name="Contact"
+        page-name="Blog"
         :links="breadcrumbLinks"/>
 
     <main class="inner-page-sec-padding-top">

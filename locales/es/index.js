@@ -1,9 +1,9 @@
-import header from "./header";
+import menu from "./menu";
 import footer from "./footer";
 import home from "./home";
 
 export default {
-    header,
+    menu,
     footer,
     home,
 };

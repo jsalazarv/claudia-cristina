@@ -10,25 +10,25 @@
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/')">{{ $t('header.home') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/')">{{ $t('menu.home') }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/shop')">{{ $t('header.shop') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/shop')">{{ $t('menu.shop') }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/gallery')">{{ $t('header.gallery') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/gallery')">{{ $t('menu.gallery') }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/books')">{{ $t('header.books') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/books')">{{ $t('menu.books') }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/blog')">{{ $t('header.blog') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/blog')">{{ $t('menu.blog') }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/events')">{{ $t('header.events') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/events')">{{ $t('menu.events') }}</NuxtLink>
                 </li>
                 <li class="menu-item">
-                  <NuxtLink :to="localePath('/contact')">{{ $t('header.contact') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/contact')">{{ $t('menu.contact') }}</NuxtLink>
                 </li>
               </ul>
             </div>
@@ -46,7 +46,9 @@
                       class="ion-ios-search-strong"></i></a>
                 </li>
                 <li class="sin-link">
-                  <a href="#" class="cart-link link-icon"><i class="ion-bag"></i></a>
+                  <NuxtLink :to="localePath('/cart')" class="cart-link link-icon">
+                    <i class="ion-bag"></i>
+                  </NuxtLink>
                   <div class="sin-dropdown cart-dropdown">
                     <div class="inner-single-block">
                       <div class="cart-product">
@@ -69,13 +71,21 @@
                     </div>
                     <div class="inner-single-block">
                       <ul class="cart-details">
-                        <li><span class="label">Subtotal</span> <span
-                            class="value">€500.00</span></li>
-                        <li><span class="label">Shipping</span> <span class="value">€7.00</span>
+                        <li>
+                          <span class="label">{{ $t('menu.cart.subtotal') }}</span>
+                          <span class="value">€500.00</span>
                         </li>
-                        <li><span class="label">Taxes</span> <span class="value">€0.00</span>
+                        <li>
+                          <span class="label">{{ $t('menu.cart.shipping') }}</span>
+                          <span class="value">€7.00</span>
                         </li>
-                        <li><span class="label">Total</span> <span class="value">€507.00</span>
+                        <li>
+                          <span class="label">{{ $t('menu.cart.taxes') }}</span>
+                          <span class="value">€0.00</span>
+                        </li>
+                        <li>
+                          <span class="label">{{ $t('menu.cart.total') }}</span>
+                          <span class="value">€507.00</span>
                         </li>
                       </ul>
                     </div>
@@ -83,7 +93,7 @@
                       <NuxtLink
                           class="btn w-100"
                           to="/checkout">
-                        Checkout
+                        {{ $t('menu.cart.checkout') }}
                       </NuxtLink>
                     </div>
                   </div>
@@ -93,29 +103,41 @@
                       class="ion-navicon"></i></a>
                   <div class="sin-dropdown option-dropdown">
                     <div class="inner-single-block">
-                      <h4 class="option-title">English <i class="fas fa-angle-down"></i></h4>
+                      <h4 class="option-title">
+                        {{ $t('menu.submenu.language') }}
+                        <i class="fas fa-angle-down"></i>
+                      </h4>
                       <ul class="option-list">
                         <li>
-                          <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
+                          <NuxtLink :to="switchLocalePath('en')">
+                            {{ $t('menu.submenu.english') }}
+                          </NuxtLink>
                         </li>
                         <li>
-                          <NuxtLink :to="switchLocalePath('es')">Spanish</NuxtLink>
+                          <NuxtLink :to="switchLocalePath('es')">
+                            {{ $t('menu.submenu.spanish') }}
+                          </NuxtLink>
                         </li>
-                      </ul>
-                    </div>
-                    <div class="inner-single-block">
-                      <h4 class="option-title">EUR <i class="fas fa-angle-down"></i></h4>
-                      <ul class="option-list">
-                        <li><a href="">€ Euro</a></li>
-                        <li><a href="">$ US Dollar</a></li>
                       </ul>
                     </div>
                     <div class="inner-single-block">
                       <h4 class="option-title">my account</h4>
                       <ul class="option-list">
-                        <li><a href="my-account.html">My account</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="login-register.html">Sign in</a></li>
+                        <li>
+                          <NuxtLink :to="localePath('/my-account')">
+                            {{ $t('menu.submenu.myAccount') }}
+                          </NuxtLink>
+                        </li>
+                        <li>
+                          <NuxtLink :to="localePath('/checkout')">
+                            {{ $t('menu.submenu.checkout') }}
+                          </NuxtLink>
+                        </li>
+                        <li>
+                          <NuxtLink :to="localePath('/auth')">
+                            {{ $t('menu.submenu.signIin') }}
+                          </NuxtLink>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -146,12 +168,9 @@
       <div class="container">
         <div class="row align-items-end">
           <div class="col-md-4 col-7">
-
-            <a href="index.html" class="site-brand">
-              <img src="image/main-logo-white.png" alt="">
-            </a>
-
-
+            <NuxtLink :to="localePath('/')">
+              <img width="300" src="/images/logo-white.png" alt="">
+            </NuxtLink>
           </div>
           <div class="col-md-8 col-5 text-right">
             <div class="mobile-header-btns header-top-widget ">
@@ -201,140 +220,56 @@
           <nav class="off-canvas-nav">
             <ul class="mobile-menu">
               <li class="menu-item-has-children">
-                <NuxtLink to="/">{{ $t('header.home') }}</NuxtLink>
+                <NuxtLink to="/">{{ $t('menu.home') }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Blog</a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children">
-                    <a href="#">Blog Grid</a>
-                    <ul class="sub-menu">
-                      <li><a href="blog.html">Full Widh (Default)</a></li>
-                      <li><a href="blog-left-sidebar.html">left Sidebar</a></li>
-                      <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Blog List</a>
-                    <ul class="sub-menu">
-                      <li><a href="blog-list.html">Full Widh (Default)</a></li>
-                      <li><a href="blog-list-left-sidebar.html">left Sidebar</a></li>
-                      <li><a href="blog-list-right-sidebar.html">Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Blog Details</a>
-                    <ul class="sub-menu">
-                      <li><a href="blog-details.html">Image Format (Default)</a></li>
-                      <li><a href="blog-details-gallery.html">Gallery Format</a></li>
-                      <li><a href="blog-details-audio.html">Audio Format</a></li>
-                      <li><a href="blog-details-video.html">Video Format</a></li>
-                      <li><a href="blog-details-left-sidebar.html">left Sidebar</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="menu-item-has-children">
-                <a href="#">Shop</a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children">
-                    <a href="#">Shop Grid</a>
-                    <ul class="sub-menu">
-                      <li><a href="shop-grid.html">Fullwidth</a></li>
-                      <li><a href="shop-grid--box-layout.html">Fullwidth (box layout)</a></li>
-                      <li><a href="shop-grid-left-sidebar.html">left Sidebar</a></li>
-                      <li><a href="shop-grid-left-sidebar--box-layout.html">left Sidebar(box
-                        layout)</a></li>
-                      <li><a href="shop-grid-right-sidebar--box-layout.html">Right Sidebar</a>
-                      </li>
-                      <li><a href="shop-grid-right-sidebar.html">Right Sidebar(box layout)</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Shop List</a>
-                    <ul class="sub-menu">
-                      <li><a href="shop-list.html">Fullwidth</a></li>
-                      <li><a href="shop-list--box-layout.html">Fullwidth (box layout)</a></li>
-                      <li><a href="shop-list-left-sidebar.html">left Sidebar</a></li>
-                      <li><a href="shop-list-left-sidebar--box-layout.html">left Sidebar(box
-                        layout)</a></li>
-                      <li><a href="shop-list-right-sidebar.html">Right Sidebar</a></li>
-                      <li><a href="shop-list-right-sidebar--box-layout.html">Right Sidebar(box
-                        layout)</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Product Details 1</a>
-                    <ul class="sub-menu">
-                      <li><a href="product-details.html">Product Details Page</a></li>
-                      <li><a href="product-details-affiliate.html">Product Details Affiliate</a>
-                      </li>
-                      <li><a href="product-details-group.html">Product Details Group</a></li>
-                      <li><a href="product-details-variable.html">Product Details Variables</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Product Details 2</a>
-                    <ul class="sub-menu">
-                      <li><a href="product-details-left-thumbnail.html">left Thumbnail</a></li>
-                      <li><a href="product-details-right-thumbnail.html">Right Thumbnail</a></li>
-                      <li><a href="product-details-left-gallery.html">Left Gallery</a></li>
-                      <li><a href="product-details-right-gallery.html">Right Gallery</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                <NuxtLink :to="localePath('/shop')">{{ $t('menu.shop') }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Pages</a>
-                <ul class="sub-menu">
-                  <li> <a href="cart.html">Cart</a></li>
-                  <li> <a href="checkout.html">Checkout</a></li>
-                  <li> <a href="compare.html">Compare</a></li>
-                  <li> <a href="wishlist.html">Wishlist</a></li>
-                  <li> <a href="login-register.html">Login Register</a></li>
-                  <li> <a href="my-account.html">My Account</a></li>
-                </ul>
+                <NuxtLink :to="localePath('/gallery')">{{ $t('menu.gallery') }}</NuxtLink>
               </li>
-              <li><a href="contact.html">Contact</a></li>
-
+              <li class="menu-item-has-children">
+                <NuxtLink :to="localePath('/books')">{{ $t('menu.books') }}</NuxtLink>
+              </li>
+              <li class="menu-item-has-children">
+                <NuxtLink :to="localePath('/blog')">{{ $t('menu.blog') }}</NuxtLink>
+              </li>
+              <li class="menu-item-has-children">
+                <NuxtLink :to="localePath('/events')">{{ $t('menu.events') }}</NuxtLink>
+              </li>
+              <li class="menu-item-has-children">
+                <NuxtLink :to="localePath('/contact')">{{ $t('menu.contact') }}</NuxtLink>
+              </li>
             </ul>
           </nav>
           <!-- mobile menu navigation end -->
         </div>
         <!-- mobile menu end -->
-        <nav class="off-canvas-nav">
-          <ul class="mobile-menu currency-menu">
-            <li class="menu-item-has-children">
-              <a href="#">Currency - USD $ <i class="fas fa-angle-down"></i></a>
-              <ul class="sub-menu">
-                <li> <a href="cart.html">USD $</a></li>
-                <li> <a href="checkout.html">EUR €</a></li>
-              </ul>
-            </li>
-            <li class="menu-item-has-children">
-              <a href="#">Lang - Eng<i class="fas fa-angle-down"></i></a>
-              <ul class="sub-menu">
-                <li>Eng</li>
-                <li>Ban</li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
         <div class="off-canvas-bottom">
           <div class="contact-list mb--10">
-            <a href="" class="sin-contact"><i class="fas fa-mobile-alt"></i>(12345) 78790220</a>
-            <a href="" class="sin-contact"><i class="fas fa-envelope"></i>examle@handart.com</a>
+            <!--<a href="" class="sin-contact"><i class="fas fa-mobile-alt"></i>(12345) 78790220</a>-->
+            <a href="mailto: contacto@claudiacristina.art" class="sin-contact">
+              <i class="fas fa-envelope"></i>
+              contacto@claudiacristina.art
+            </a>
           </div>
           <div class="header-social social-normal">
-            <a href="#" class="single-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="single-icon"><i class="fab fa-twitter"></i></a>
+            <a
+                target="_blank"
+                href="https://www.facebook.com/claudiacristinamx"
+                class="single-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <!--<a href="#" class="single-icon"><i class="fab fa-twitter"></i></a>
             <a href="#" class="single-icon"><i class="fas fa-rss"></i></a>
             <a href="#" class="single-icon"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="single-icon"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="single-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="single-icon"><i class="fab fa-google-plus-g"></i></a>-->
+            <a
+                target="_blank"
+                href="https://www.instagram.com/claudiacristinamx/?hl=es-la"
+                class="single-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>
