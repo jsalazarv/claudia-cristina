@@ -1,30 +1,19 @@
-import en from '~/locales/en';
+import locales from "./locales";
 
 export default {
     buildModules: [
         '@nuxt/typescript-build',
-        '@nuxtjs/axios',
+        '@nuxtjs/axios'
     ],
     modules: [
-        '@nuxtjs/i18n',
+        '@nuxtjs/i18n'
     ],
     i18n: {
         locales: ['en', 'es'],
         defaultLocale: 'en',
         vueI18n: {
             fallbackLocale: 'en',
-            messages: {
-                en: {
-                    header: {
-                        home: 'Home'
-                    }
-                },
-                es: {
-                    header: {
-                        home: 'Inicio'
-                    }
-                }
-            }
+            messages: locales
         }
     },
     axios: {
