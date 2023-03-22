@@ -1,20 +1,11 @@
 <template>
   <div>
-    <section class="bg-image" style="background-image: url('/image/others/bredcrumb-bg.jpg')"
-             data-bg="/image/others/bredcrumb-bg.jpg">
-      <h2 class="sr-only">Site Breadcrumb</h2>
-      <div class="container">
-        <div class="breadcrumb-contents">
-          <nav aria-label="breadcrumb">
-            <h2 class="page-name">Shop List</h2>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item">Shop List</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </section>
+    <Banner
+        bg-image="http://localhost:3001/image/others/bredcrumb-bg.jpg"
+        title="Site Breadcrumb"
+        page-name="Shop"
+        :links="breadcrumbLinks"/>
+
     <main class="inner-page-sec-padding pb--0">
       <div class="container">
         <div class="row">
@@ -643,6 +634,17 @@
 definePageMeta({
   layout: 'public'
 });
+
+const breadcrumbLinks = [
+  {
+    title: 'Home',
+    url: '/'
+  },
+  {
+    title: 'Shop',
+    url: '/shop'
+  }
+];
 </script>
 
 <style scoped>
