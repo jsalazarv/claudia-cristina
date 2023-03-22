@@ -10,7 +10,7 @@
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <NuxtLink to="/">{{ $t('header.home') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/')">{{ $t('header.home') }}</NuxtLink>
                 </li>
                 <!-- Shop -->
                 <li class="menu-item has-children mega-menu">
@@ -181,14 +181,10 @@
                       <h4 class="option-title">English <i class="fas fa-angle-down"></i></h4>
                       <ul class="option-list">
                         <li>
-                          <a href="#" @click="$i18n.locale = 'en'">
-                            English
-                          </a>
+                          <NuxtLink :to="switchLocalePath('en')">English</NuxtLink>
                         </li>
                         <li>
-                          <a href="#" @click="$i18n.locale = 'es'">
-                            Spanish
-                          </a>
+                          <NuxtLink :to="switchLocalePath('es')">Spanish</NuxtLink>
                         </li>
                       </ul>
                     </div>
