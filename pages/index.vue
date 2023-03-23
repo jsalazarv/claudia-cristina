@@ -1701,6 +1701,8 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import 'swiper/css/pagination';
 import blogData from '~/assets/json/blogs/index.json';
+import {useUserService} from "~/services/UserService";
+import {onMounted} from "vue";
 
 definePageMeta({
   layout: 'public'
@@ -1742,6 +1744,13 @@ const galleryNavigation = {
 const modules = [Navigation]
 
 const blogs = ref(blogData)
+
+/*const userService = useUserService();
+
+onMounted(async () => {
+  const users = await userService.fetchAll();
+  console.log("[Users]", users);
+});*/
 </script>
 
 <style scoped></style>
