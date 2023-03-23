@@ -4,8 +4,13 @@
     "title": "5 Disadvantages Of Handcraft",
     "short_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
-    "citation": "",
-    "blog_banner": "/image/others/blog-card-1.jpg",
+    "image": {
+      "url": "/image/others/blog-card-1.jpg",
+      "name": ""
+    },
+    "created_date": "",
+    "last_update": "",
+    "enabled": true,
     "publication_date": {
       "full_date": "Demo Handart",
       "year": "2023",
@@ -14,11 +19,30 @@
     },
     "tags": ["", "", ""],
     "author": {
+      "id": 1,
       "name": "Demo Handart",
-      "image": {
-        "url": "",
-        "name": ""
-      }
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
+      "contact": {
+        "phone": "Demo Handart",
+        "email": "Demo Handart"
+      },
+      "addresses": [
+        {
+          "country": "lkjlkj",
+          "state": "lkjlkj",
+          "city": "lkjlkj",
+          "street": "lkjlkj",
+          "zip": "lkjlkj",
+          "exterior_number": "lkjlkj",
+          "interior_number": "lkjlkj"
+        }
+      ],
+      "images": [
+        {
+          "url": "",
+          "name": ""
+        }
+      ]
     }
   },
   {
@@ -26,8 +50,13 @@
     "title": "How You Can Workaround Handcraft",
     "short_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
-    "citation": "",
-    "blog_banner": "/image/others/blog-card-1.jpg",
+    "image": {
+      "url": "/image/others/blog-card-1.jpg",
+      "name": ""
+    },
+    "created_date": "",
+    "last_update": "",
+    "enabled": true,
     "publication_date": {
       "full_date": "Demo Handart",
       "year": "2023",
@@ -36,11 +65,30 @@
     },
     "tags": ["", "", ""],
     "author": {
+      "id": 1,
       "name": "Demo Handart",
-      "image": {
-        "url": "",
-        "name": ""
-      }
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
+      "contact": {
+        "phone": "Demo Handart",
+        "email": "Demo Handart"
+      },
+      "addresses": [
+        {
+          "country": "lkjlkj",
+          "state": "lkjlkj",
+          "city": "lkjlkj",
+          "street": "lkjlkj",
+          "zip": "lkjlkj",
+          "exterior_number": "lkjlkj",
+          "interior_number": "lkjlkj"
+        }
+      ],
+      "images": [
+        {
+          "url": "",
+          "name": ""
+        }
+      ]
     }
   },
   {
@@ -48,8 +96,13 @@
     "title": "7 Awesome Things You Can Learn",
     "short_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
-    "citation": "",
-    "blog_banner": "/image/others/blog-card-1.jpg",
+    "image": {
+      "url": "/image/others/blog-card-1.jpg",
+      "name": ""
+    },
+    "created_date": "",
+    "last_update": "",
+    "enabled": true,
     "publication_date": {
       "full_date": "Demo Handart",
       "year": "2023",
@@ -58,11 +111,30 @@
     },
     "tags": ["", "", ""],
     "author": {
+      "id": 1,
       "name": "Demo Handart",
-      "image": {
-        "url": "",
-        "name": ""
-      }
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the ...",
+      "contact": {
+        "phone": "Demo Handart",
+        "email": "Demo Handart"
+      },
+      "addresses": [
+        {
+          "country": "lkjlkj",
+          "state": "lkjlkj",
+          "city": "lkjlkj",
+          "street": "lkjlkj",
+          "zip": "lkjlkj",
+          "exterior_number": "lkjlkj",
+          "interior_number": "lkjlkj"
+        }
+      ],
+      "images": [
+        {
+          "url": "",
+          "name": ""
+        }
+      ]
     }
   }
 ]

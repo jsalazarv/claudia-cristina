@@ -1,25 +1,45 @@
 <template>
-  <div class="blog-card">
-    <a :href="image" data-fancybox class="blog-image">
-      <img :src="image" :alt="alt">
-      <div class="date-badge">
-        <span class="month">{{ month }}</span>
-        <h5>{{ day }}</h5>
+  <div class="blog-card card-style-list">
+    <div class="row">
+      <div
+          class="col-lg-6 col-md-6"
+          :class="{
+            'col-lg-12 col-md-12': vertical
+          }">
+        <a :href="image" data-fancybox class="blog-image">
+          <img :src="image" :alt="alt">
+          <div class="date-badge">
+            <span class="month">{{ month }}</span>
+            <h5>{{ day }}</h5>
+          </div>
+          <div class="plus-icon">
+            <i class="fas fa-plus-circle"></i>
+          </div>
+        </a>
       </div>
-      <div class="plus-icon">
-        <i class="fas fa-plus-circle"></i>
+      <div
+          class="col-lg-6 col-md-6"
+          :class="{
+            'col-lg-12 col-md-12': vertical
+          }">
+        <div
+            class="text"
+            :class="{
+              'mt--15': vertical
+            }"
+        >
+          <h3 class="blog-title">
+            <a :href="link">{{ title }}</a>
+          </h3>
+          <span class="post-meta">
+            <i class="fas fa-user"></i>
+            {{ author }}
+          </span>
+          <p>{{ content }}</p>
+        </div>
       </div>
-    </a>
-    <div class="text">
-      <h3 class="blog-title">
-        <a :href="link">{{ title }}</a>
-      </h3>
-      <span class="post-meta">
-        <i class="fas fa-user"></i>
-        {{ author }}
-      </span>
-      <p>{{ content }}</p>
     </div>
+
   </div>
 </template>
 
@@ -33,6 +53,7 @@ const props = defineProps({
   link: String,
   author: String,
   content: String,
+  vertical: Boolean
 });
 </script>
 

@@ -13,131 +13,20 @@
 
 
             <div class="row space-dt--30">
-              <div class="col-12 mt--30">
-                <div class="blog-card card-style-list">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <a href="image/others/blog-card-slider-3.jpg" data-fancybox class="blog-image">
-                        <img src="image/others/blog-card-slider-3.jpg" alt="">
-                        <div class="date-badge">
-                <span class="month">
-                  august
-                </span>
-                          <h5>16</h5>
-                        </div>
-                        <div class="plus-icon">
-                          <i class="fas fa-plus-circle"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="text">
-                        <h3 class="blog-title"><a href="blog-details.html">5 Common Misconceptions About Handcraft.</a></h3>
-                        <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                          industrys
-                          standard
-                          dummy text ever since the ...</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+              <div
+                  class="col-12 mt--30"
+                  v-for="(blog, index) in blogs"
+                  :key="index">
+                <PostPreview
+                    :image="blog.blog_banner"
+                    :alt="blog.alt"
+                    :month="blog.publication_date.month"
+                    :day="blog.publication_date.day"
+                    :title="blog.title"
+                    :link="blog.link"
+                    :author="blog.author.name"
+                    :content="blog.short_description"/>
               </div>
-              <div class="col-12 mt--30">
-                <div class="blog-card card-style-list">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <a href="image/others/blog-card-slider-2.jpg" data-fancybox class="blog-image">
-                        <img src="image/others/blog-card-slider-2.jpg" alt="">
-                        <div class="date-badge">
-                <span class="month">
-                  august
-                </span>
-                          <h5>16</h5>
-                        </div>
-                        <div class="plus-icon">
-                          <i class="fas fa-plus-circle"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="text">
-                        <h3 class="blog-title"><a href="blog-details.html">Five Quick Tips For Handcraft.</a></h3>
-                        <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                          industrys
-                          standard
-                          dummy text ever since the ...</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="col-12 mt--30">
-                <div class="blog-card card-style-list">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <a href="image/others/blog-card-1.jpg" data-fancybox class="blog-image">
-                        <img src="image/others/blog-card-1.jpg" alt="">
-                        <div class="date-badge">
-                <span class="month">
-                  august
-                </span>
-                          <h5>16</h5>
-                        </div>
-                        <div class="plus-icon">
-                          <i class="fas fa-plus-circle"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="text">
-                        <h3 class="blog-title"><a href="blog-details.html">7 Factors That Affect Handcraft's Longevity.</a></h3>
-                        <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                          industrys
-                          standard
-                          dummy text ever since the ...</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="col-12 mt--30">
-                <div class="blog-card card-style-list">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                      <a href="image/others/blog-card-slider-1.jpg" data-fancybox class="blog-image">
-                        <img src="image/others/blog-card-slider-1.jpg" alt="">
-                        <div class="date-badge">
-                <span class="month">
-                  august
-                </span>
-                          <h5>16</h5>
-                        </div>
-                        <div class="plus-icon">
-                          <i class="fas fa-plus-circle"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                      <div class="text">
-                        <h3 class="blog-title"><a href="blog-details.html">15 Tips To Avoid Failure In Handcraft.</a></h3>
-                        <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                          industrys
-                          standard
-                          dummy text ever since the ...</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
             </div>
 
           </div>
@@ -206,6 +95,8 @@
 </template>
 
 <script setup lang="ts">
+import blogData from '~/assets/json/blogs/index.json';
+
 definePageMeta({
   layout: 'public'
 });
@@ -220,6 +111,7 @@ const breadcrumbLinks = [
     url: '/blog'
   }
 ];
+const blogs = ref(blogData)
 </script>
 
 <style scoped>
