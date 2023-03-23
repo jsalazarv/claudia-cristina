@@ -1686,7 +1686,8 @@
                 :title="blog.title"
                 :link="blog.link"
                 :author="blog.author.name"
-                :content="blog.short_description"/>
+                :content="blog.short_description"
+                @onClick="redirectToDetail(blog.id)"/>
           </div>
         </div>
       </div>
@@ -1743,7 +1744,13 @@ const galleryNavigation = {
 
 const modules = [Navigation]
 
-const blogs = ref(blogData)
+const blogs = ref(blogData);
+
+const redirectToDetail = (id: number) => {
+  navigateTo({
+    path: `/blog/${id}`,
+  });
+}
 
 /*const userService = useUserService();
 

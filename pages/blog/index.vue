@@ -10,8 +10,6 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 order-lg-2 mb--70 mb-lg--0">
-
-
             <div class="row space-dt--30">
               <div
                   class="col-12 mt--30"
@@ -25,10 +23,10 @@
                     :title="blog.title"
                     :link="blog.link"
                     :author="blog.author.name"
-                    :content="blog.short_description"/>
+                    :content="blog.short_description"
+                    @onClick="redirectToDetail(blog.id)" />
               </div>
             </div>
-
           </div>
           <div class="col-lg-3 order-lg-1">
             <div class="inner-page-sidebar">
@@ -111,7 +109,13 @@ const breadcrumbLinks = [
     url: '/blog'
   }
 ];
-const blogs = ref(blogData)
+const blogs = ref(blogData);
+
+const redirectToDetail = (id: number) => {
+  navigateTo({
+    path: `/blog/${id}`,
+  });
+}
 </script>
 
 <style scoped>
