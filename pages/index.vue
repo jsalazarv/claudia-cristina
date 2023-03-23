@@ -1372,7 +1372,7 @@
         <swiper id="swiper-replace" :breakpoints="cardBreakpoints" :style="{
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
-        }" :navigation="true" 
+        }" :navigation="true"
          :modules="modules">
           <swiper-slide>
             <div class="product-card">
@@ -1669,82 +1669,23 @@
     <section class="">
       <div class="container">
         <div class="section-title mb--25">
-          <h2>Latest Blog</h2>
-          <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
-            formas.</p>
+          <h2>{{ $t('home.latestBlog.title') }}</h2>
+          <p>{{ $t('home.latestBlog.subtitle') }}</p>
         </div>
         <div class="row ">
-          <div class="col-lg-4 col-md-6 mt--30">
-            <div class="blog-card">
-              <a href="/image/others/blog-card-1.jpg" data-fancybox class="blog-image">
-                <img src="/image/others/blog-card-1.jpg" alt="">
-                <div class="date-badge">
-                  <span class="month">
-                    august
-                  </span>
-                  <h5>16</h5>
-                </div>
-                <div class="plus-icon">
-                  <i class="fas fa-plus-circle"></i>
-                </div>
-              </a>
-              <div class="text">
-                <h3 class="blog-title"><a href="blog-details.html">5 Disadvantages Of Handcraft</a></h3>
-                <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industrys standard
-                  dummy text ever since the ...</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt--30">
-            <div class="blog-card">
-              <a href="/image/others/blog-card-1.jpg" data-fancybox class="blog-image">
-                <img src="/image/others/blog-card-1.jpg" alt="">
-                <div class="date-badge">
-                  <span class="month">
-                    august
-                  </span>
-                  <h5>16</h5>
-                </div>
-                <div class="plus-icon">
-                  <i class="fas fa-plus-circle"></i>
-                </div>
-              </a>
-              <div class="text">
-                <h3 class="blog-title"><a href="blog-details--gallery-format.html">How You Can
-                    Workaround Handcraft</a></h3>
-                <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industrys standard
-                  dummy text ever since the ...</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt--30">
-            <div class="blog-card">
-              <a href="/image/others/blog-card-slider-3.jpg" data-fancybox class="blog-image">
-                <img src="/image/others/blog-card-slider-3.jpg" alt="">
-                <div class="date-badge">
-                  <span class="month">
-                    august
-                  </span>
-                  <h5>16</h5>
-                </div>
-                <div class="plus-icon">
-                  <i class="fas fa-plus-circle"></i>
-                </div>
-              </a>
-              <div class="text">
-                <h3 class="blog-title"><a href="blog-details.html">7 Awesome Things You Can Learn</a>
-                </h3>
-                <span class="post-meta"><i class="fas fa-user"></i>Demo Handart</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                  Ipsum has been the industrys
-                  standard
-                  dummy text ever since the ...</p>
-              </div>
-            </div>
+          <div
+              class="col-lg-4 col-md-6 mt--30"
+              v-for="(blog, index) in blogs"
+              :key="index">
+            <PostPreview
+                :image="blog.blog_banner"
+                :alt="blog.alt"
+                :month="blog.publication_date.month"
+                :day="blog.publication_date.day"
+                :title="blog.title"
+                :link="blog.link"
+                :author="blog.author.name"
+                :content="blog.short_description"/>
           </div>
         </div>
       </div>
@@ -1753,12 +1694,12 @@
 </template>
 
 <script setup lang="ts">
-
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination, Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import 'swiper/css/pagination';
+import blogData from '~/assets/json/blogs/index.json';
 
 definePageMeta({
   layout: 'public'
@@ -1798,6 +1739,8 @@ const galleryNavigation = {
 }
 
 const modules = [Navigation]
+
+const blogs = ref(blogData)
 </script>
 
 <style scoped></style>
