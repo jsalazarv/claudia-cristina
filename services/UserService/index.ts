@@ -1,14 +1,27 @@
-// services/UserService.ts
+import { useAxios } from '../api';
+import { IUserService } from "~/services/UserService/types";
+import { IUser } from '~/entities/user';
 
-import { User } from './types';
-import { apiClient } from '../api';
 
-export async function getUsers(): Promise<User[]> {
-    const response = await apiClient.get<User[]>('/users');
-    return response.data;
+export const useUserService = (): IUserService => {
+    const client = useAxios()
+
+    return {
+        async fetchAll(): Promise<IUser[]> {
+            const response = await client.get<IUser[]>('/users');
+            return response.data;
+        },
+
+        async fetchOne(id): Promise<IUser> {
+            const response = await client.get<IUser>(`/users/${id}`);
+            return response.data;
+        },
+
+        /*async createOne(data: CreateUserInput) {
+            const response = await client.post(`/users`,data );
+            return response.data
+        },*/
+    }
 }
 
-export async function getUser(id: number): Promise<User> {
-    const response = await apiClient.get<User>(`/users/${id}`);
-    return response.data;
-}
+//const userService = useUserService()
