@@ -1678,6 +1678,7 @@
               v-for="(blog, index) in blogs"
               :key="index">
             <PostPreview
+                vertical
                 :image="blog.blog_banner"
                 :alt="blog.alt"
                 :month="blog.publication_date.month"
