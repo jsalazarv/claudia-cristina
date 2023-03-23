@@ -28,8 +28,8 @@
               'mt--15': vertical
             }"
         >
-          <h3 class="blog-title">
-            <a :href="link">{{ title }}</a>
+          <h3 class="blog-title" @click="handleTitleClick">
+            {{ title }}
           </h3>
           <span class="post-meta">
             <i class="fas fa-user"></i>
@@ -53,8 +53,15 @@ const props = defineProps({
   link: String,
   author: String,
   content: String,
-  vertical: Boolean
+  vertical: Boolean,
+  onClick: Function
 });
+
+const emits = defineEmits(['onClick']);
+
+const handleTitleClick = () => {
+  emits('onClick');
+}
 </script>
 
 <style scoped>
