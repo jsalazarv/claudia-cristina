@@ -25,13 +25,11 @@
         "images": [
           {
             "url": "",
-            "name": "",
-            "main": true
+            "name": ""
           },
           {
             "url": "",
-            "name": "",
-            "main": false
+            "name": ""
           }
         ]
       }
