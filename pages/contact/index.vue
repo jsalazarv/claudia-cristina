@@ -1,133 +1,157 @@
 <template>
- <div>
-   <Banner
-       bg-image="/image/others/bredcrumb-bg.jpg"
-       title="Site Breadcrumb"
-       page-name="Contact"
-       :links="breadcrumbLinks"/>
+  <div>
+    <Banner
+      bg-image="/image/others/bredcrumb-bg.jpg"
+      title="Site Breadcrumb"
+      page-name="Contact"
+      :links="breadcrumbLinks" />
 
-   <main class="contact_area section-padding pt--60">
-   <div class="container">
-     <div class="row">
-       <div class="col-lg-12">
-         <div class="gogle_map">
-           <div id="googleMap">
-             <!-- TODO: map component -->
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="row mt--60 space-db--30">
-       <div class="col-lg-5 col-md-5 col-12">
-         <div class="contact_adress">
-           <div class="ct_address">
-             <h3 class="ct_title">Location & Details</h3>
-             <p>It is a long established fact that readewill be distracted by the readable content of a page when looking
-               at ilayout.</p>
-           </div>
+    <main class="contact_area section-padding pt--60">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="gogle_map">
+              <div id="googleMap">
+                <!-- TODO: map component -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt--60 space-db--30">
+          <div class="col-lg-5 col-md-5 col-12">
+            <div class="contact_adress">
+              <div class="ct_address">
+                <h3 class="ct_title">Location & Details</h3>
+                <p>
+                  It is a long established fact that readewill be distracted by
+                  the readable content of a page when looking at ilayout.
+                </p>
+              </div>
 
-           <div class="address_wrapper">
+              <div class="address_wrapper">
+                <div class="address">
+                  <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-info-text">
+                    <p>
+                      <span>Address:</span> 1234 - Bandit Tringi lAliquam <br />
+                      Vitae. New York
+                    </p>
+                  </div>
+                </div>
 
-             <div class="address">
-               <div class="icon">
-                 <i class="fas fa-map-marker-alt"></i>
-               </div>
-               <div class="contact-info-text">
-                 <p><span>Address:</span> 1234 - Bandit Tringi lAliquam <br> Vitae. New York</p>
-               </div>
-             </div>
+                <div class="address">
+                  <div class="icon">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <div class="contact-info-text">
+                    <p><span>Email: </span> support@example.com</p>
+                  </div>
+                </div>
 
-             <div class="address">
-               <div class="icon">
-                 <i class="far fa-envelope"></i>
-               </div>
-               <div class="contact-info-text">
-                 <p><span>Email: </span> support@example.com </p>
-               </div>
-             </div>
+                <div class="address">
+                  <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <div class="contact-info-text">
+                    <p><span>Phone:</span> (800) 0123 456 789</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-12 mt-sm--30 mt-md--0">
+            <div class="contact_form">
+              <h3 class="ct_title">Send Us a Message</h3>
 
-             <div class="address">
-               <div class="icon">
-                 <i class="fas fa-mobile-alt"></i>
-               </div>
-               <div class="contact-info-text">
-                 <p><span>Phone:</span> (800) 0123 456 789 </p>
-               </div>
-             </div>
-
-           </div>
-
-         </div>
-       </div>
-       <div class="col-lg-7 col-md-7 col-12 mt-sm--30 mt-md--0">
-
-         <div class="contact_form">
-           <h3 class="ct_title">Send Us a Message</h3>
-
-           <form id="contact-form" action="php/mail.php" method="post" class="contact-form">
-             <div class="row">
-               <div class="col-lg-12">
-                 <div class="form-group">
-                   <label>Your Name <span class="required">*</span></label>
-                   <input type="text" name="customerName" id="customername" class="form-control" required>
-                 </div>
-               </div>
-               <div class="col-lg-12">
-                 <div class="form-group">
-                   <label>Your Email <span class="required">*</span></label>
-                   <input type="email" name="customerEmail" id="customerEmail" class="form-control" required>
-                 </div>
-               </div>
-               <div class="col-lg-12">
-                 <div class="form-group">
-                   <label>Subject</label>
-                   <input type="text" name="contactSubject" class="form-control" id="contactSubject">
-                 </div>
-               </div>
-               <div class="col-lg-12">
-                 <div class="form-group">
-                   <label>Your Message</label>
-                   <textarea name="contactMessage" class="form-control" id="contactMessage"></textarea>
-                 </div>
-               </div>
-               <div class="col-lg-6">
-                 <div class="form-btn">
-                   <button type="submit" value="submit" id="submit" class="btn btn-black"
-                           name="submit">send</button>
-                 </div>
-               </div>
-             </div>
-           </form>
-           <div class="form-output">
-             <p class="form-messege"></p>
-           </div>
-         </div>
-
-       </div>
-     </div>
-   </div>
-   </main>
-
- </div>
+              <form
+                id="contact-form"
+                action="php/mail.php"
+                method="post"
+                class="contact-form">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label>Your Name <span class="required">*</span></label>
+                      <input
+                        type="text"
+                        name="customerName"
+                        id="customername"
+                        class="form-control"
+                        required />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label>Your Email <span class="required">*</span></label>
+                      <input
+                        type="email"
+                        name="customerEmail"
+                        id="customerEmail"
+                        class="form-control"
+                        required />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label>Subject</label>
+                      <input
+                        type="text"
+                        name="contactSubject"
+                        class="form-control"
+                        id="contactSubject" />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label>Your Message</label>
+                      <textarea
+                        name="contactMessage"
+                        class="form-control"
+                        id="contactMessage"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-btn">
+                      <button
+                        type="submit"
+                        value="submit"
+                        id="submit"
+                        class="btn btn-black"
+                        name="submit">
+                        send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="form-output">
+                <p class="form-messege"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'public'
+  layout: 'public',
 });
 
 const breadcrumbLinks = [
   {
     title: 'Home',
-    url: '/'
+    url: '/',
   },
   {
     title: 'Contact',
-    url: '/contact'
-  }
+    url: '/contact',
+  },
 ];
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

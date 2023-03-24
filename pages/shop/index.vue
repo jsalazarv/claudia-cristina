@@ -1,10 +1,10 @@
 <template>
   <div>
     <Banner
-        bg-image="/image/others/bredcrumb-bg.jpg"
-        title="Site Breadcrumb"
-        page-name="Shop"
-        :links="breadcrumbLinks"/>
+      bg-image="/image/others/bredcrumb-bg.jpg"
+      title="Site Breadcrumb"
+      page-name="Shop"
+      :links="breadcrumbLinks" />
 
     <main class="inner-page-sec-padding pb--0">
       <div class="container">
@@ -15,75 +15,77 @@
                 <div class="col-lg-2 col-sm-6">
                   <!-- Product View Mode -->
                   <div class="product-view-mode">
-                    <a href="#" class="sorting-btn active" data-target="list "><i class="fas fa-list"></i></a>
-                    <a href="#" class="sorting-btn" data-target="grid"><i class="fas fa-th"></i></a>
+                    <a href="#" class="sorting-btn active" data-target="list "
+                      ><i class="fas fa-list"></i
+                    ></a>
+                    <a href="#" class="sorting-btn" data-target="grid"
+                      ><i class="fas fa-th"></i
+                    ></a>
                   </div>
                 </div>
                 <div class="col-lg-5 col-sm-6 mt-sm-0 mt-3">
-                  <span class="toolbar-status">
-                    There are 12 products.
-                  </span>
+                  <span class="toolbar-status"> There are 12 products. </span>
                 </div>
                 <div class="col-lg-5 mt-3 mt-lg-0 pr-md-0">
                   <div class="sorting-selection">
                     <span>Sort By:</span>
-                    <select id="input-sort" class="form-control nice-select sort-select">
-                      <option value="" selected="selected">Default Sorting</option>
-                      <option value="">Sort
-                        By:Name (A - Z)
+                    <select
+                      id="input-sort"
+                      class="form-control nice-select sort-select">
+                      <option value="" selected="selected">
+                        Default Sorting
                       </option>
-                      <option value="">Sort
-                        By:Name (Z - A)
-                      </option>
-                      <option value="">Sort
-                        By:Price (Low &gt; High)
-                      </option>
-                      <option value="">Sort
-                        By:Price (High &gt; Low)
-                      </option>
-                      <option value="">Sort
-                        By:Rating (Highest)
-                      </option>
-                      <option value="">Sort
-                        By:Rating (Lowest)
-                      </option>
-                      <option value="">Sort
-                        By:Model (A - Z)
-                      </option>
-                      <option value="">Sort
-                        By:Model (Z - A)
-                      </option>
+                      <option value="">Sort By:Name (A - Z)</option>
+                      <option value="">Sort By:Name (Z - A)</option>
+                      <option value="">Sort By:Price (Low &gt; High)</option>
+                      <option value="">Sort By:Price (High &gt; Low)</option>
+                      <option value="">Sort By:Rating (Highest)</option>
+                      <option value="">Sort By:Rating (Lowest)</option>
+                      <option value="">Sort By:Model (A - Z)</option>
+                      <option value="">Sort By:Model (Z - A)</option>
                     </select>
                   </div>
                 </div>
-
               </div>
             </div>
-            <div class="shop-product-wrap list with-pagination row space-db--30">
+            <div
+              class="shop-product-wrap list with-pagination row space-db--30">
               <!-- TODO: product component -->
               <div class="col-lg-4 col-sm-6 mb--30" v-for="n in 6">
                 <div class="product-card product-type-list">
                   <div class="image">
-                    <img src="/image/products/home-1/product-1.jpg" alt="">
+                    <img src="/image/products/home-1/product-1.jpg" alt="" />
                     <div class="hover-content">
                       <a href="product-details.html" class="hover-image">
-                        <img src="/image/products/home-1/product-2.jpg" alt="">
+                        <img
+                          src="/image/products/home-1/product-2.jpg"
+                          alt="" />
                       </a>
 
                       <div class="hover-btns">
-                        <a href="cart.html" class="sin-btn"><i class="ion-bag"></i></a>
-                        <a href="compare.html" class="sin-btn"><i class="ion-android-options"></i></a>
-                        <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal"><i
-                            class="ion-android-open"></i></a>
+                        <a href="cart.html" class="sin-btn"
+                          ><i class="ion-bag"></i
+                        ></a>
+                        <a href="compare.html" class="sin-btn"
+                          ><i class="ion-android-options"></i
+                        ></a>
+                        <a
+                          href="javascript:"
+                          class="sin-btn"
+                          data-toggle="modal"
+                          data-target="#quickModal"
+                          ><i class="ion-android-open"></i
+                        ></a>
                       </div>
-
                     </div>
                     <span class="product-badge">new</span>
                     <span class="product-badge-2">-5%</span>
                   </div>
                   <div class="description-block">
                     <div class="description-header">
-                      <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                      <h5 class="description-tag">
+                        <a href="">Fashion Manufacturer</a>
+                      </h5>
                       <div class="rating-block">
                         <span class="ion-android-star-outline star_on"></span>
                         <span class="ion-android-star-outline star_on"></span>
@@ -92,16 +94,22 @@
                         <span class="ion-android-star-outline"></span>
                       </div>
                     </div>
-                    <h3 class="post-title"><a href="product-details.html"> zyfg men sweatshirts casual ethnic style
-                      pattern</a></h3>
+                    <h3 class="post-title">
+                      <a href="product-details.html">
+                        zyfg men sweatshirts casual ethnic style pattern</a
+                      >
+                    </h3>
 
                     <p class="mb-0 price">
                       <del class="price-old">€500.00</del>
-                      <span class="price-new">€500.00</span></p>
+                      <span class="price-new">€500.00</span>
+                    </p>
                   </div>
                   <div class="description-block list-description">
                     <div class="description-header">
-                      <h5 class="description-tag"><a href="">Fashion Manufacturer</a></h5>
+                      <h5 class="description-tag">
+                        <a href="">Fashion Manufacturer</a>
+                      </h5>
                       <div class="rating-block">
                         <span class="ion-android-star-outline star_on"></span>
                         <span class="ion-android-star-outline star_on"></span>
@@ -110,18 +118,24 @@
                         <span class="ion-android-star-outline"></span>
                       </div>
                     </div>
-                    <h3 class="post-title"><a href="product-details.html"> zyfg men sweatshirts casual ethnic style
-                      pattern</a></h3>
+                    <h3 class="post-title">
+                      <a href="product-details.html">
+                        zyfg men sweatshirts casual ethnic style pattern</a
+                      >
+                    </h3>
 
                     <div class="price">
                       <del class="price-old">€500.00</del>
-                      <span class="price-new">€500.00</span></div>
+                      <span class="price-new">€500.00</span>
+                    </div>
                     <article class="product-article border-top">
                       <h4 class="sr-only">Product Summery</h4>
-                      <p>Sleeveless knee-length chiffon dress. V-neckline with elastic under the bust lining.</p>
+                      <p>
+                        Sleeveless knee-length chiffon dress. V-neckline with
+                        elastic under the bust lining.
+                      </p>
                     </article>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -132,30 +146,44 @@
                     <p>Showing 1-12 of 12 item(s)</p>
                   </div>
                   <div class="pagination-btns">
-                    <a href="" class="single-btn prev-btn "><i class="zmdi zmdi-chevron-left"></i> Previous</a>
+                    <a href="" class="single-btn prev-btn"
+                      ><i class="zmdi zmdi-chevron-left"></i> Previous</a
+                    >
                     <a href="" class="single-btn">1</a>
                     <a href="" class="single-btn">2</a>
                     <a href="" class="single-btn">3</a>
                     <a href="" class="single-btn">4</a>
-                    <a href="" class="single-btn next-btn">Next <i class="zmdi zmdi-chevron-right"></i></a>
+                    <a href="" class="single-btn next-btn"
+                      >Next <i class="zmdi zmdi-chevron-right"></i
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade modal-quick-view" id="quickModal" tabindex="-1" role="dialog"
-                 aria-labelledby="quickModal"
-                 aria-hidden="true">
+            <div
+              class="modal fade modal-quick-view"
+              id="quickModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="quickModal"
+              aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <button type="button" class="close modal-close-btn ml-auto" data-dismiss="modal" aria-label="Close">
+                  <button
+                    type="button"
+                    class="close modal-close-btn ml-auto"
+                    data-dismiss="modal"
+                    aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                   <div class="product-details-modal">
                     <div class="row">
                       <div class="col-lg-5">
                         <!-- Product Details Slider Big Image-->
-                        <div class="product-details-slider handart-slick-slider arrow-type-two" data-slick-setting='{
+                        <div
+                          class="product-details-slider handart-slick-slider arrow-type-two"
+                          data-slick-setting='{
                     "slidesToShow": 1,
                     "arrows": false,
                     "fade": true,
@@ -164,23 +192,35 @@
                     "asNavFor": ".product-slider-nav"
                     }'>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-1.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-1.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-2.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-2.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-3.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-3.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-4.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-4.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-5.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-5.jpg"
+                              alt="" />
                           </div>
                         </div>
                         <!-- Product Details Slider Nav -->
-                        <div class="mt--30 product-slider-nav handart-slick-slider arrow-type-two" data-slick-setting='{
+                        <div
+                          class="mt--30 product-slider-nav handart-slick-slider arrow-type-two"
+                          data-slick-setting='{
                   "infinite":true,
                     "autoplay": true,
                     "autoplaySpeed": 8000,
@@ -192,36 +232,57 @@
                     "focusOnSelect": true
                     }'>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-1.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-1.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-2.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-2.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-3.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-3.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-4.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-4.jpg"
+                              alt="" />
                           </div>
                           <div class="single-slide">
-                            <img src="/image/products/product-details-big-5.jpg" alt="">
+                            <img
+                              src="/image/products/product-details-big-5.jpg"
+                              alt="" />
                           </div>
                         </div>
                       </div>
                       <div class="col-lg-7 mt--30 mt-lg--30">
                         <div class="product-details-description pl-lg--30">
-                          <h3 class="title">Zyfg Men Sweatshirts Casual Ethnic Style Pattern</h3>
+                          <h3 class="title">
+                            Zyfg Men Sweatshirts Casual Ethnic Style Pattern
+                          </h3>
                           <div class="widget-block">
                             <div class="rating-block">
-                              <span class="ion-android-star-outline star_on"></span>
-                              <span class="ion-android-star-outline star_on"></span>
-                              <span class="ion-android-star-outline star_on"></span>
+                              <span
+                                class="ion-android-star-outline star_on"></span>
+                              <span
+                                class="ion-android-star-outline star_on"></span>
+                              <span
+                                class="ion-android-star-outline star_on"></span>
                               <span class="ion-android-star-outline"></span>
                               <span class="ion-android-star-outline"></span>
                             </div>
                             <div class="review-widget">
-                              <a href=""><i class="far fa-comment"></i>Read reviews (1)</a>
-                              <a href=""><i class="fas fa-pencil-alt"></i>Write a review</a>
+                              <a href=""
+                                ><i class="far fa-comment"></i>Read reviews
+                                (1)</a
+                              >
+                              <a href=""
+                                ><i class="fas fa-pencil-alt"></i>Write a
+                                review</a
+                              >
                             </div>
                           </div>
                           <div class="price-block">
@@ -230,30 +291,39 @@
                           </div>
                           <article class="product-details-article border-top">
                             <h4 class="sr-only">Product Summery</h4>
-                            <p>Long printed dress with thin adjustable straps. V-neckline and wiring under the Dust with
-                              ruffles at the
-                              bottom of the
-                              dress.</p>
+                            <p>
+                              Long printed dress with thin adjustable straps.
+                              V-neckline and wiring under the Dust with ruffles
+                              at the bottom of the dress.
+                            </p>
                           </article>
                           <div class="widget-block-3">
                             <span class="widget-label">Quantity</span>
                             <div class="widgets">
                               <div class="count-input-block">
-                                <input type="number" class="form-control text-center" value="1">
+                                <input
+                                  type="number"
+                                  class="form-control text-center"
+                                  value="1" />
                                 <div class="count-input-btns">
-                                  <button class="inc-ammount count-btn"><i class="zmdi zmdi-chevron-up"></i></button>
-                                  <button class="dec-ammount count-btn"><i class="zmdi zmdi-chevron-up"></i></button>
+                                  <button class="inc-ammount count-btn">
+                                    <i class="zmdi zmdi-chevron-up"></i>
+                                  </button>
+                                  <button class="dec-ammount count-btn">
+                                    <i class="zmdi zmdi-chevron-up"></i>
+                                  </button>
                                 </div>
                               </div>
                               <div class="add-cart-btn">
-                                <a href="" class="btn btn-outlined--primary"><i class="ion-bag"></i>Add to Cart</a>
+                                <a href="" class="btn btn-outlined--primary"
+                                  ><i class="ion-bag"></i>Add to Cart</a
+                                >
                               </div>
                               <div class="product-status">
                                 <p><i class="zmdi zmdi-check"></i> In Stock</p>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </div>
                     </div>
@@ -261,19 +331,26 @@
                   <div class="modal-footer">
                     <div class="widget-social-share">
                       <span class="widget-label">Share</span>
-                      <div class="social-share rounded-icons transparent-bg text-left">
-                        <a href="#" class="single-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="single-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="single-icon"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="single-icon"><i class="fab fa-google-plus-g"></i></a>
+                      <div
+                        class="social-share rounded-icons transparent-bg text-left">
+                        <a href="#" class="single-icon"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="#" class="single-icon"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" class="single-icon"
+                          ><i class="fab fa-youtube"></i
+                        ></a>
+                        <a href="#" class="single-icon"
+                          ><i class="fab fa-google-plus-g"></i
+                        ></a>
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
           <aside class="col-lg-3">
             <div class="inner-page-sidebar">
@@ -286,15 +363,23 @@
                       <h2 class="mb-0">
                         <a href="#">Wtaches</a>
                       </h2>
-                      <button class="position-relative collapsed" type="button" data-toggle="collapse"
-                              data-target="#collapseOne"
-                              aria-expanded="false" aria-controls="collapseOne">
+                      <button
+                        class="position-relative collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne">
                         <i class="fas fa-plus open-icon"></i>
                         <i class="fas fa-minus close-icon"></i>
                       </button>
                     </div>
 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div
+                      id="collapseOne"
+                      class="collapse"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample">
                       <div class="card-body">
                         <ul class="sidebar-acc-list">
                           <li><a href="">Omega Watch</a></li>
@@ -311,14 +396,22 @@
                       <h2 class="mb-0">
                         <a href="#">Bags & Wallets</a>
                       </h2>
-                      <button class="position-relative collapsed" type="button" data-toggle="collapse"
-                              data-target="#collapseTwo"
-                              aria-expanded="false" aria-controls="collapseTwo">
+                      <button
+                        class="position-relative collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo">
                         <i class="fas fa-plus open-icon"></i>
                         <i class="fas fa-minus close-icon"></i>
                       </button>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExample">
                       <div class="card-body">
                         <ul class="sidebar-acc-list">
                           <li><a href="">Omega Watch</a></li>
@@ -335,15 +428,22 @@
                       <h2 class="mb-0">
                         <a href="#">Belts</a>
                       </h2>
-                      <button class="position-relative collapsed" type="button" data-toggle="collapse"
-                              data-target="#collapseThree"
-                              aria-expanded="false" aria-controls="collapseThree">
+                      <button
+                        class="position-relative collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree">
                         <i class="fas fa-plus open-icon"></i>
                         <i class="fas fa-minus close-icon"></i>
                       </button>
                     </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                         data-parent="#accordionExample">
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordionExample">
                       <div class="card-body">
                         <ul class="sidebar-acc-list">
                           <li><a href="">Omega Watch</a></li>
@@ -360,15 +460,22 @@
                       <h2 class="mb-0">
                         <a href="#">Gifts & Gadgets</a>
                       </h2>
-                      <button class="position-relative collapsed" type="button" data-toggle="collapse"
-                              data-target="#collapseFour"
-                              aria-expanded="false" aria-controls="collapseFour">
+                      <button
+                        class="position-relative collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour">
                         <i class="fas fa-plus open-icon"></i>
                         <i class="fas fa-minus close-icon"></i>
                       </button>
                     </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                         data-parent="#accordionExample">
+                    <div
+                      id="collapseFour"
+                      class="collapse"
+                      aria-labelledby="headingFour"
+                      data-parent="#accordionExample">
                       <div class="card-body">
                         <ul class="sidebar-acc-list">
                           <li><a href="">Omega Watch</a></li>
@@ -387,35 +494,35 @@
                 <h3 class="sidebar-title">Price</h3>
                 <ul class="sidebar-list-1">
                   <li class="single-price">
-                    <input type="radio" name="common-field" id="check-1">
+                    <input type="radio" name="common-field" id="check-1" />
                     <label for="check-1">
                       <i class="zmdi zmdi-check"></i>
                       <a href="javascript:">€96.00 - €104.00 (2)</a>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="radio" name="common-field" id="check-2">
+                    <input type="radio" name="common-field" id="check-2" />
                     <label for="check-2">
                       <i class="zmdi zmdi-check"></i>
                       <a href="javascript:">€86.00 - €504.00 (2)</a>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="radio" name="common-field" id="check-3">
+                    <input type="radio" name="common-field" id="check-3" />
                     <label for="check-3">
                       <i class="zmdi zmdi-check"></i>
                       <a href="javascript:">€56.00 - €304.00 (2)</a>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="radio" name="common-field" id="check-4">
+                    <input type="radio" name="common-field" id="check-4" />
                     <label for="check-4">
                       <i class="zmdi zmdi-check"></i>
                       <a href="javascript:">€26.00 - €204.00 (2)</a>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="radio" name="common-field" id="check-5">
+                    <input type="radio" name="common-field" id="check-5" />
                     <label for="check-5">
                       <i class="zmdi zmdi-check"></i>
                       <a href="javascript:">€66.00 - €704.00 (2)</a>
@@ -428,32 +535,50 @@
                 <h3 class="sidebar-title">Size</h3>
                 <ul class="sidebar-checkbox-list">
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="size-1" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="size-1"
+                      hidden />
                     <label for="size-1">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>S (12)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="size-2" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="size-2"
+                      hidden />
                     <label for="size-2">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>M (10)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="size-3" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="size-3"
+                      hidden />
                     <label for="size-3">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>L (5)</span>
                     </label>
                   </li>
@@ -466,22 +591,18 @@
                   <li class="single-color">
                     <span class="color-box bg-yellow"></span>
                     <a href="">White (5)</a>
-
                   </li>
                   <li class="single-color">
                     <span class="color-box bg-red"></span>
                     <a href="">Green (1)</a>
-
                   </li>
                   <li class="single-color">
                     <span class="color-box bg-green"></span>
                     <a href="">Yellow (3)</a>
-
                   </li>
                   <li class="single-color">
                     <span class="color-box bg-beige"></span>
                     <a href="">Beige (2)</a>
-
                   </li>
                 </ul>
               </div>
@@ -490,32 +611,50 @@
                 <h3 class="sidebar-title">Size</h3>
                 <ul class="sidebar-checkbox-list">
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="com-1" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="com-1"
+                      hidden />
                     <label for="com-1">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Cotton (5)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="com-2" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="com-2"
+                      hidden />
                     <label for="com-2">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Polyester (3)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="com-3" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="com-3"
+                      hidden />
                     <label for="com-3">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Viscose (4)</span>
                     </label>
                   </li>
@@ -526,52 +665,82 @@
                 <h3 class="sidebar-title">Properties</h3>
                 <ul class="sidebar-checkbox-list">
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="pro-1" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="pro-1"
+                      hidden />
                     <label for="pro-1">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Colorful Dress (1)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="pro-2" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="pro-2"
+                      hidden />
                     <label for="pro-2">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Maxi Dress (2)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="pro-3" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="pro-3"
+                      hidden />
                     <label for="pro-3">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Midi Dress (1)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="pro-4" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="pro-4"
+                      hidden />
                     <label for="pro-4">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Short Dress (4)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="pro-5" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="pro-5"
+                      hidden />
                     <label for="pro-5">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Short Sleeve (4)</span>
                     </label>
                   </li>
@@ -582,47 +751,62 @@
                 <h3 class="sidebar-title">Styles</h3>
                 <ul class="sidebar-checkbox-list">
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="sty-1" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="sty-1"
+                      hidden />
                     <label for="sty-1">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Casual (6)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="sty-2" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="sty-2"
+                      hidden />
                     <label for="sty-2">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Dressy (2)</span>
                     </label>
                   </li>
                   <li class="single-price">
-                    <input type="checkbox" name="common-field" id="sty-3" hidden>
+                    <input
+                      type="checkbox"
+                      name="common-field"
+                      id="sty-3"
+                      hidden />
                     <label for="sty-3">
-          <span class="box-field">
-            <i class="custom-square"></i>
-            <span class="checkmark"><i class="zmdi zmdi-check"></i></span>
-          </span>
+                      <span class="box-field">
+                        <i class="custom-square"></i>
+                        <span class="checkmark"
+                          ><i class="zmdi zmdi-check"></i
+                        ></span>
+                      </span>
                       <span>Girly (4)</span>
                     </label>
                   </li>
-
                 </ul>
               </div>
               <!-- Promo Block -->
               <div class="single-block">
                 <a href="" class="promo-image sidebar">
-                  <img src="/image/others/sidebar-promotion-img.jpg" alt="">
+                  <img src="/image/others/sidebar-promotion-img.jpg" alt="" />
                 </a>
               </div>
             </div>
-
-
           </aside>
         </div>
       </div>
@@ -632,21 +816,19 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'public'
+  layout: 'public',
 });
 
 const breadcrumbLinks = [
   {
     title: 'Home',
-    url: '/'
+    url: '/',
   },
   {
     title: 'Shop',
-    url: '/shop'
-  }
+    url: '/shop',
+  },
 ];
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

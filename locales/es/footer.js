@@ -1,3 +1,3 @@
 export default {
-    allRightsReserved: 'Todos los derechos reservados'
-}
+  allRightsReserved: 'Todos los derechos reservados',
+};

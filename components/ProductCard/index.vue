@@ -1,21 +1,23 @@
 <template>
   <div class="product-card">
     <div class="image">
-      <img :src="image" :alt="name">
+      <img :src="image" :alt="name" />
       <div class="hover-content">
         <a href="#" class="hover-image">
-          <img src="/image/products/home-1/product-2.jpg" :alt="name">
+          <img src="/image/products/home-1/product-2.jpg" :alt="name" />
         </a>
-
         <div class="hover-btns">
           <a href="cart.html" class="sin-btn">
             <i class="ion-bag"></i>
           </a>
-          <a href="javascript:" class="sin-btn" data-toggle="modal" data-target="#quickModal">
+          <a
+            href="javascript:"
+            class="sin-btn"
+            data-toggle="modal"
+            data-target="#quickModal">
             <i class="ion-android-open"></i>
           </a>
         </div>
-
       </div>
       <span class="product-badge" v-if="isNew">new</span>
     </div>
