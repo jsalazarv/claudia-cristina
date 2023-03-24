@@ -6,7 +6,10 @@
         <nav aria-label="breadcrumb">
           <h2 class="page-name">{{ pageName }}</h2>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item" v-for="(link, index) in links" :key="index">
+            <li
+              class="breadcrumb-item"
+              v-for="(link, index) in links"
+              :key="index">
               <NuxtLink :to="link.url">{{ link.title }}</NuxtLink>
             </li>
           </ol>
@@ -17,8 +20,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from "@vue/runtime-core";
-import { ILink } from "~/components/Banner/types";
+import { PropType } from '@vue/runtime-core';
+import { ILink } from '~/components/Banner/types';
 
 const props = defineProps({
   title: {
@@ -48,6 +51,4 @@ const bgStyle = computed(() => {
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

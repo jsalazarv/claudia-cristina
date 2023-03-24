@@ -13,21 +13,17 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="footer-social social-normal text-center text-md-right ">
+            <div class="footer-social social-normal text-center text-md-right">
               <a
-                  target="_blank"
-                  href="https://www.facebook.com/claudiacristinamx"
-                  class="single-icon">
+                target="_blank"
+                href="https://www.facebook.com/claudiacristinamx"
+                class="single-icon">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <!--<a href="#" class="single-icon"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="single-icon"><i class="fas fa-rss"></i></a>
-              <a href="#" class="single-icon"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="single-icon"><i class="fab fa-google-plus-g"></i></a>-->
               <a
-                  target="_blank"
-                  href="https://www.instagram.com/claudiacristinamx/?hl=es-la"
-                  class="single-icon">
+                target="_blank"
+                href="https://www.instagram.com/claudiacristinamx/?hl=es-la"
+                class="single-icon">
                 <i class="fab fa-instagram"></i>
               </a>
             </div>
@@ -38,10 +34,6 @@
   </footer>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

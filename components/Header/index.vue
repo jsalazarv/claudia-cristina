@@ -1,59 +1,77 @@
 <template>
   <div>
     <header
-        class="site-header ha-header-1 absolute-header sticky-init fixed-header d-lg-block d-none"
-        :class="{'sticky-header': isFixed}"
-    >
+      class="site-header ha-header-1 absolute-header sticky-init fixed-header d-lg-block d-none"
+      :class="{ 'sticky-header': isFixed }">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-lg-5">
             <div class="main-navigation">
               <ul class="main-menu @@menuColor">
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/')">{{ $t('menu.home') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/')">{{
+                    $t('menu.home')
+                  }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/shop')">{{ $t('menu.shop') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/shop')">{{
+                    $t('menu.shop')
+                  }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/gallery')">{{ $t('menu.gallery') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/gallery')">{{
+                    $t('menu.gallery')
+                  }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/books')">{{ $t('menu.books') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/books')">{{
+                    $t('menu.books')
+                  }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/blog')">{{ $t('menu.blog') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/blog')">{{
+                    $t('menu.blog')
+                  }}</NuxtLink>
                 </li>
                 <li class="menu-item has-children">
-                  <NuxtLink :to="localePath('/events')">{{ $t('menu.events') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/events')">{{
+                    $t('menu.events')
+                  }}</NuxtLink>
                 </li>
                 <li class="menu-item">
-                  <NuxtLink :to="localePath('/contact')">{{ $t('menu.contact') }}</NuxtLink>
+                  <NuxtLink :to="localePath('/contact')">{{
+                    $t('menu.contact')
+                  }}</NuxtLink>
                 </li>
               </ul>
             </div>
           </div>
           <div class="col-lg-3 col-xl-3 offset-lg-1 offset-xl-0">
             <NuxtLink :to="localePath('/')">
-              <img width="300" src="/images/logo-white.png" alt="">
+              <img width="300" src="/images/logo-white.png" alt="" />
             </NuxtLink>
           </div>
           <div class="col-lg-3 col-xl-4">
             <div class="header-top-widget">
               <ul class="header-links">
                 <li class="sin-link">
-                  <a href="#" class="search-trigger link-icon"><i
-                      class="ion-ios-search-strong"></i></a>
+                  <a href="#" class="search-trigger link-icon"
+                    ><i class="ion-ios-search-strong"></i
+                  ></a>
                 </li>
                 <li class="sin-link">
-                  <NuxtLink :to="localePath('/cart')" class="cart-link link-icon">
+                  <NuxtLink
+                    :to="localePath('/cart')"
+                    class="cart-link link-icon">
                     <i class="ion-bag"></i>
                   </NuxtLink>
                   <div class="sin-dropdown cart-dropdown">
                     <div class="inner-single-block">
                       <div class="cart-product">
                         <div class="icon">
-                          <img src="image/products/home-1/cart-product-1.jpg" alt="">
+                          <img
+                            src="image/products/home-1/cart-product-1.jpg"
+                            alt="" />
                           <div class="product-badge-3">1x</div>
                         </div>
                         <div class="description">
@@ -72,11 +90,15 @@
                     <div class="inner-single-block">
                       <ul class="cart-details">
                         <li>
-                          <span class="label">{{ $t('menu.cart.subtotal') }}</span>
+                          <span class="label">{{
+                            $t('menu.cart.subtotal')
+                          }}</span>
                           <span class="value">€500.00</span>
                         </li>
                         <li>
-                          <span class="label">{{ $t('menu.cart.shipping') }}</span>
+                          <span class="label">{{
+                            $t('menu.cart.shipping')
+                          }}</span>
                           <span class="value">€7.00</span>
                         </li>
                         <li>
@@ -90,17 +112,16 @@
                       </ul>
                     </div>
                     <div class="inner-single-block">
-                      <NuxtLink
-                          class="btn w-100"
-                          to="/checkout">
+                      <NuxtLink class="btn w-100" to="/checkout">
                         {{ $t('menu.cart.checkout') }}
                       </NuxtLink>
                     </div>
                   </div>
                 </li>
                 <li class="sin-link">
-                  <a href="#" class="link-icon hamburgur-icon"><i
-                      class="ion-navicon"></i></a>
+                  <a href="#" class="link-icon hamburgur-icon"
+                    ><i class="ion-navicon"></i
+                  ></a>
                   <div class="sin-dropdown option-dropdown">
                     <div class="inner-single-block">
                       <h4 class="option-title">
@@ -152,8 +173,10 @@
                     </button>
                     <form action="#">
                       <div class="search-box">
-                        <input type="text" placeholder="Search Our catalog">
-                        <button class="search-button"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Search Our catalog" />
+                        <button class="search-button">
+                          <i class="fas fa-search"></i>
+                        </button>
                       </div>
                     </form>
                   </div>
@@ -169,24 +192,22 @@
         <div class="row align-items-end">
           <div class="col-md-4 col-7">
             <NuxtLink :to="localePath('/')">
-              <img width="300" src="/images/logo-white.png" alt="">
+              <img width="300" src="/images/logo-white.png" alt="" />
             </NuxtLink>
           </div>
           <div class="col-md-8 col-5 text-right">
-            <div class="mobile-header-btns header-top-widget ">
+            <div class="mobile-header-btns header-top-widget">
               <ul class="header-links">
                 <li class="sin-link">
-                  <NuxtLink
-                      class="art-link link-icon"
-                      to="/cart">
+                  <NuxtLink class="art-link link-icon" to="/cart">
                     <i class="ion-bag"></i>
                   </NuxtLink>
                 </li>
                 <li class="sin-link">
                   <a
-                      href="#"
-                      class="link-icon hamburgur-icon off-canvas-btn"
-                      @click="handleAside">
+                    href="#"
+                    class="link-icon hamburgur-icon off-canvas-btn"
+                    @click="handleAside">
                     <i class="ion-navicon"></i>
                   </a>
                 </li>
@@ -197,24 +218,19 @@
       </div>
     </header>
 
-
     <!--Off Canvas Navigation Start-->
-    <aside
-        class="off-canvas-wrapper"
-        :class="{'open': isOpenAside}"
-    >
-      <div
-          class="btn-close-off-canvas"
-          @click="handleAside"
-      >
+    <aside class="off-canvas-wrapper" :class="{ open: isOpenAside }">
+      <div class="btn-close-off-canvas" @click="handleAside">
         <i class="ion-android-close"></i>
       </div>
       <div class="off-canvas-inner">
         <!-- search box start -->
         <div class="search-box offcanvas">
           <form>
-            <input type="text" placeholder="Search Here">
-            <button class="search-btn"><i class="ion-ios-search-strong"></i></button>
+            <input type="text" placeholder="Search Here" />
+            <button class="search-btn">
+              <i class="ion-ios-search-strong"></i>
+            </button>
           </form>
         </div>
         <!-- search box end -->
@@ -227,22 +243,34 @@
                 <NuxtLink to="/">{{ $t('menu.home') }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <NuxtLink :to="localePath('/shop')">{{ $t('menu.shop') }}</NuxtLink>
+                <NuxtLink :to="localePath('/shop')">{{
+                  $t('menu.shop')
+                }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <NuxtLink :to="localePath('/gallery')">{{ $t('menu.gallery') }}</NuxtLink>
+                <NuxtLink :to="localePath('/gallery')">{{
+                  $t('menu.gallery')
+                }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <NuxtLink :to="localePath('/books')">{{ $t('menu.books') }}</NuxtLink>
+                <NuxtLink :to="localePath('/books')">{{
+                  $t('menu.books')
+                }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <NuxtLink :to="localePath('/blog')">{{ $t('menu.blog') }}</NuxtLink>
+                <NuxtLink :to="localePath('/blog')">{{
+                  $t('menu.blog')
+                }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <NuxtLink :to="localePath('/events')">{{ $t('menu.events') }}</NuxtLink>
+                <NuxtLink :to="localePath('/events')">{{
+                  $t('menu.events')
+                }}</NuxtLink>
               </li>
               <li class="menu-item-has-children">
-                <NuxtLink :to="localePath('/contact')">{{ $t('menu.contact') }}</NuxtLink>
+                <NuxtLink :to="localePath('/contact')">{{
+                  $t('menu.contact')
+                }}</NuxtLink>
               </li>
             </ul>
           </nav>
@@ -259,19 +287,15 @@
           </div>
           <div class="header-social social-normal">
             <a
-                target="_blank"
-                href="https://www.facebook.com/claudiacristinamx"
-                class="single-icon">
+              target="_blank"
+              href="https://www.facebook.com/claudiacristinamx"
+              class="single-icon">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <!--<a href="#" class="single-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="single-icon"><i class="fas fa-rss"></i></a>
-            <a href="#" class="single-icon"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="single-icon"><i class="fab fa-google-plus-g"></i></a>-->
             <a
-                target="_blank"
-                href="https://www.instagram.com/claudiacristinamx/?hl=es-la"
-                class="single-icon">
+              target="_blank"
+              href="https://www.instagram.com/claudiacristinamx/?hl=es-la"
+              class="single-icon">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -289,21 +313,19 @@ const isOpenAside = ref(false);
 
 const handleScroll = () => {
   isFixed.value = window.scrollY > 0;
-}
+};
 
 const handleAside = () => {
-  isOpenAside.value = !isOpenAside.value
-}
+  isOpenAside.value = !isOpenAside.value;
+};
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-})
+});
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
-})
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
