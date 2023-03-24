@@ -21,6 +21,7 @@ export default {
     },
     css: [
         'assets/css/plugins.min.css',
-        'assets/css/main.css'
+        'assets/css/main.css',
+        'assets/css/general.css',
     ]
 };

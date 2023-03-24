@@ -25,25 +25,29 @@
         <div class="row justify-content-center section-padding border-bottom">
           <div class="col-lg-8">
             <div class="welcome-content">
-              <h6 class="title-xs">Who We Are</h6>
+              <h6 class="title-xs">{{ $t('home.whoIs.title') }}</h6>
               <div class="section-title">
-                <h2>Welcome To Handart</h2>
+                <h2>{{ $t('home.whoIs.name') }}</h2>
                 <div class="title-sep">
                   <img src="/image/icon/title-sep-icon.png" alt="">
                 </div>
               </div>
-              <article class="welcome-description">
-                <h4 class="sr-only">Welcome Article</h4>
-                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                  consequat, vel illum dolore eu feugiat
-                  nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-                  praesent luptatum zzril delenit augue
-                  duis
-                  dolore te feugait nulla facilisi.</p>
-              </article>
-              <div class="author-block">
-                <a href="#"> <span class="font-weight-mid text-black text-uppercase">Jhon doe</span> -
-                  CEO Handart</a>
+              <div class="position-relative">
+                <article
+                    class="welcome-description"
+                    :class="{'paragraph': !showBiography}">
+                  <p>{{ $t('home.whoIs.biography.paragraph1') }}</p>
+                  <p>{{ $t('home.whoIs.biography.paragraph2') }}</p>
+                  <p>{{ $t('home.whoIs.biography.paragraph3') }}</p>
+                  <p>{{ $t('home.whoIs.biography.paragraph4') }}</p>
+                </article>
+                <div :class="{'gradient': !showBiography}">
+                  <span
+                      class="font-weight-mid text-black text-uppercase cursor-pointer hover-color"
+                      @click="onShowBiography">
+                    {{ $t('home.whoIs.showMore') }}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -64,7 +68,7 @@
                 v-for="(collection, index) in collections"
                 :key="index">
               <a
-                  class="nav-link"
+                  class="nav-link cursor-pointer"
                   :class="{ active: activeTab === index }"
                   @click="activeTab = index">
                 {{ collection.title }}
@@ -495,12 +499,17 @@ const modules = [Navigation]
 const blogs = ref(blogData);
 const collections = ref(collectionsData);
 const activeTab = ref(0);
+const showBiography = ref(false);
 
 
 const redirectToDetail = (id: number) => {
   navigateTo({
     path: `/blog/${id}`,
   });
+}
+
+const onShowBiography = () => {
+  showBiography.value = !showBiography.value
 }
 
 /*const userService = useUserService();
@@ -511,4 +520,21 @@ onMounted(async () => {
 });*/
 </script>
 
-<style scoped></style>
+<style scoped>
+.paragraph {
+  overflow: hidden;
+  max-height: 9rem;
+}
+
+.gradient {
+  padding-top: 8rem;
+  background: linear-gradient(to top, #ffffff 0%, rgba(15,23,42,0) 60%);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+}
+</style>
