@@ -1,7 +1,7 @@
 <template>
   <div>
     <Banner
-        bg-image="http://localhost:3001/image/others/bredcrumb-bg.jpg"
+        bg-image="/image/others/bredcrumb-bg.jpg"
         title="Site Breadcrumb"
         page-name="Checkout"
         :links="breadcrumbLinks"/>
