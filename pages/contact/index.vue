@@ -21,11 +21,8 @@
           <div class="col-lg-5 col-md-5 col-12">
             <div class="contact_adress">
               <div class="ct_address">
-                <h3 class="ct_title">Location & Details</h3>
-                <p>
-                  It is a long established fact that readewill be distracted by
-                  the readable content of a page when looking at ilayout.
-                </p>
+                <h3 class="ct_title">{{ $t('contact.title') }}</h3>
+                <p>{{ $t('contact.subtitle') }}</p>
               </div>
 
               <div class="address_wrapper">
@@ -35,8 +32,14 @@
                   </div>
                   <div class="contact-info-text">
                     <p>
-                      <span>Address:</span> 1234 - Bandit Tringi lAliquam <br />
-                      Vitae. New York
+                      <span class="mr-2">
+                        {{ $t('contact.contact.address') }}:
+                      </span>
+                      {{ author[0].addresses[0].zip }} -
+                      {{ author[0].addresses[0].street }}
+                      <br />
+                      {{ author[0].addresses[0].city }},
+                      {{ author[0].addresses[0].country }}
                     </p>
                   </div>
                 </div>
@@ -46,7 +49,12 @@
                     <i class="far fa-envelope"></i>
                   </div>
                   <div class="contact-info-text">
-                    <p><span>Email: </span> support@example.com</p>
+                    <p>
+                      <span class="mr-2">
+                        {{ $t('contact.contact.email') }}:
+                      </span>
+                      {{ author[0].contact.email }}
+                    </p>
                   </div>
                 </div>
 
@@ -55,7 +63,12 @@
                     <i class="fas fa-mobile-alt"></i>
                   </div>
                   <div class="contact-info-text">
-                    <p><span>Phone:</span> (800) 0123 456 789</p>
+                    <p>
+                      <span class="mr-2">
+                        {{ $t('contact.contact.phone') }}:
+                      </span>
+                      {{ author[0].contact.phone }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -63,7 +76,7 @@
           </div>
           <div class="col-lg-7 col-md-7 col-12 mt-sm--30 mt-md--0">
             <div class="contact_form">
-              <h3 class="ct_title">Send Us a Message</h3>
+              <h3 class="ct_title">{{ $t('contact.form.title') }}</h3>
 
               <form
                 id="contact-form"
@@ -73,7 +86,10 @@
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <label>Your Name <span class="required">*</span></label>
+                      <label>
+                        {{ $t('contact.form.labels.name') }}
+                        <span class="required">*</span>
+                      </label>
                       <input
                         type="text"
                         name="customerName"
@@ -84,7 +100,10 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <label>Your Email <span class="required">*</span></label>
+                      <label>
+                        {{ $t('contact.form.labels.email') }}
+                        <span class="required">*</span>
+                      </label>
                       <input
                         type="email"
                         name="customerEmail"
@@ -95,7 +114,7 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <label>Subject</label>
+                      <label>{{ $t('contact.form.labels.subject') }}</label>
                       <input
                         type="text"
                         name="contactSubject"
@@ -105,7 +124,7 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <label>Your Message</label>
+                      <label>{{ $t('contact.form.labels.message') }}</label>
                       <textarea
                         name="contactMessage"
                         class="form-control"
@@ -120,7 +139,7 @@
                         id="submit"
                         class="btn btn-black"
                         name="submit">
-                        send
+                        {{ $t('contact.form.send') }}
                       </button>
                     </div>
                   </div>
@@ -138,6 +157,9 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import authorData from '~/assets/json/author/index.json';
+
 definePageMeta({
   layout: 'public',
 });
@@ -152,6 +174,7 @@ const breadcrumbLinks = [
     url: '/contact',
   },
 ];
+const author = ref(authorData);
 </script>
 
 <style scoped></style>
